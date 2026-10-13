@@ -1,4 +1,7 @@
 # Walter Schloss: framework and implementation
+
+> **Technical note for analysts.** Dense working notes with shorthand. New here? Start with the [plain-English summary](../docs/01-summary.md) and [what we found](../docs/05-what-we-found.md). Figures are a snapshot from 13 October 2026. Research only, not advice.
+
 13 October 2026. Research, not personalized financial advice. No trades have been placed.
 
 ## What the complete library changes
