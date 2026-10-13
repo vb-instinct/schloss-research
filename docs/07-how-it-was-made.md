@@ -1,6 +1,6 @@
 # How it was made, and how it repeats
 
-[Home](../README.md) | Previous: [Limits and caveats](06-limits-and-caveats.md)
+[Home](../README.md) | [Monthly results](../monthly-results.html) | Previous: [Limits and caveats](06-limits-and-caveats.md)
 
 ## Where the ideas come from
 
@@ -18,13 +18,14 @@ A library of 33 documents about Walter Schloss (182 pages): his talks, memos, in
 
 The technical details of how the screens were built are in [screener rebuild](../screener-setup/screener-rebuild.md).
 
-## The monthly routine (planned)
+## The monthly routine
 
 A refresh is planned for the 1st of each month. Each run should:
 
 - re-run the screens and note which names were added or removed, and why
 - check prices, filings, share counts and any corporate actions
-- keep last month's snapshot and show what changed
+- append the month to the [Monthly results](../monthly-results.html) table, keep last month's snapshot and show what changed
+- revise affected rows when new data has been checked, with a source and dated change note; this is not a live feed
 - separate "price moved" from "the assets got weaker"
 - publish the coverage counts and say what was not checked
 - be a valid result even if no company passes
@@ -39,4 +40,4 @@ Full protocol: [monthly protocol](../protocol/monthly-protocol.md).
 | Single-page visual report | [reports/schloss-october-2026.html](../reports/schloss-october-2026.html) |
 | Technical notes | [framework](../framework/schloss-framework-and-implementation.md), [markets/](../markets/) |
 
-[Home](../README.md) | Previous: [Limits and caveats](06-limits-and-caveats.md)
+[Home](../README.md) | [Monthly results](../monthly-results.html) | Previous: [Limits and caveats](06-limits-and-caveats.md)
