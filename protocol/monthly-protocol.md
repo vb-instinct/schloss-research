@@ -1,0 +1,1 @@
+Monthly: rerun saved Screener.in screen (NSE) and TradingView scanners (US, ASX); verify tangible book, NCAV, senior claims, leases, dilution and cash burn from primary filings; date every price. Logins live in the vault, not here.
