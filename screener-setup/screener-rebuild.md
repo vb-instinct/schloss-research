@@ -1,15 +1,8 @@
 # Schloss screen rebuild on free full-universe screeners
 
+> **Technical note for analysts.** New here? Start with the [plain-English summary](../docs/01-summary.md). Both tools used are free: TradingView (US and Australia) and Screener.in (India). Account details have been removed.
+
 Run date: Tuesday 13 October 2026, ~9:20pm AEDT. Research only - not personal financial advice. All figures are screener/vendor data, fiscal-quarter fundamentals, undated quotes; verify against primary filings before any decision.
-
-## Accounts created (agent-operated, free tier)
-
-| Tool | Login | Email verified | Vault entry | Free plan |
-|---|---|---|---|---|
-| TradingView | (agent account email, redacted) | Yes (clicked activation link, redirected via account_activate) | (vault entry, redacted) (login, agent-designated) | Basic $0 |
-| Screener.in | (agent account email, redacted) | Yes (activation link clicked, landed on dashboard) | (vault entry, redacted) (login, agent-designated) | Hobby Investor Rs.0 |
-
-Credentials generated at random and stored only in the vault; never in chat. Both logins were saved into the cloud-browser profile (config-h) on lease release, so future runs start signed in.
 
 ## What worked
 
@@ -105,8 +98,8 @@ All three prior NSE candidates reproduce: DEN Networks P/B 0.32, GSFC 0.48 (prio
 
 ## Monthly run handoff
 
-1. NSE: sign into Screener.in (vault login), open the saved screen URL above, sort by 'Price to book value', collect all pages (158 names this run), tag financials/holdcos, verify strict-tier names against audited filings.
-2. US/ASX: sign into TradingView (vault login), POST to scanner.tradingview.com/{america,australia}/scan from the signed-in screener page with columns [name, description, close, currency, exchange, market_cap_basic, price_book_fq, debt_to_equity_fq, total_current_assets_fq, total_liabilities_fq, total_equity_fq, goodwill_fq, intangible_assets_fq, cash_n_short_term_invest_fq, total_debt_fq, sector, industry], filters type=stock, subtype in (common, adr), 0.0001 <= price_book_fq <= 0.8, 0 <= debt_to_equity_fq <= 1; gate to major exchanges + mcap floor ($30m / A$30m); compute TBV, P/TBV, NCAV, net-net; drop vendor-P/B < 0.03 or computed P/TBV > 1.2 as bad data.
+1. NSE: sign into Screener.in (a free account), open the saved screen URL above, sort by 'Price to book value', collect all pages (158 names this run), tag financials/holdcos, verify strict-tier names against audited filings.
+2. US/ASX: sign into TradingView (a free account), POST to scanner.tradingview.com/{america,australia}/scan from the signed-in screener page with columns [name, description, close, currency, exchange, market_cap_basic, price_book_fq, debt_to_equity_fq, total_current_assets_fq, total_liabilities_fq, total_equity_fq, goodwill_fq, intangible_assets_fq, cash_n_short_term_invest_fq, total_debt_fq, sector, industry], filters type=stock, subtype in (common, adr), 0.0001 <= price_book_fq <= 0.8, 0 <= debt_to_equity_fq <= 1; gate to major exchanges + mcap floor ($30m / A$30m); compute TBV, P/TBV, NCAV, net-net; drop vendor-P/B < 0.03 or computed P/TBV > 1.2 as bad data.
 3. Verdicts stay research-only: pass / conditional / watch / excluded / unverified, with a no-buy month a valid result.
 
 Data provenance: TradingView scanner API (in-page, signed-in session, 13 Oct 2026 ~9:15-9:20pm AEDT) and Screener.in screen results (same session). No primary filings were re-read in this run; this rebuild replaces the discovery step, not the diligence step.
