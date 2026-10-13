@@ -1,0 +1,12 @@
+title: Schloss-style value research
+description: Plain-English research notes on asset-value investing. Research only, not advice.
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+relative_links:
+  enabled: true
+  collections: false
+include:
+  - reports
