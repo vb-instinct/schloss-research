@@ -12,7 +12,7 @@ Imagine you could buy a shop for less than the value of the stock on its shelves
 
 1. **Cast a wide net.** Free screening websites listed companies whose share price is well below their "book value" (what the accounts say the company is worth) and that do not owe too much.
 2. **Cut the list down.** We removed banks, miners and similar companies, because their accounts need different tools, and kept ordinary operating businesses.
-3. **Read the real reports.** For a small group we went to the official filings (the documents companies must publish) and recalculated the key numbers ourselves, instead of trusting the screening website.
+3. **Check the numbers.** For a small group we recalculated the key numbers ourselves, instead of trusting the screening website. Where we could, we used the official filings (the documents companies must publish); for some companies we only had data websites, which are not official sources.
 4. **Look for the catch.** For each company we asked: why is it cheap, what could go wrong, and are the assets really worth what the accounts say?
 
 ## What came out
