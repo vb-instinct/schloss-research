@@ -2,6 +2,8 @@
 
 **What is this?** A public research project that asks one plain question: *can we find shares that are priced for less than the stuff the company actually owns, and is it safe to rely on that?* It follows the style of Walter Schloss, a famously patient and low-key investor, and applies it to three stock markets: the United States, India (NSE) and Australia (ASX).
 
+**Easiest way to read it:** the rendered site at https://vb-instinct.github.io/schloss-research/
+
 **Snapshot date:** 13 October 2026. This is a one-off first run. Prices and company numbers go stale quickly.
 
 > **Research notes only. This is not investment, tax or legal advice.** Nothing here is a recommendation to buy or sell anything. No trades were made. Read [limits and caveats](docs/06-limits-and-caveats.md) before using anything on this page.
@@ -28,7 +30,7 @@ Full plain-English version: [docs/01 Summary](docs/01-summary.md).
 | 6 | [Limits and caveats](docs/06-limits-and-caveats.md) | What was not checked and why you should be careful |
 | 7 | [How it was made, and how it repeats](docs/07-how-it-was-made.md) | Method, sources, and the monthly routine |
 
-An illustrated single-page version is here: **[October 2026 report](reports/schloss-october-2026.html)**. (GitHub shows .html files as code. Download it and open it in a browser, or use the rendered version at https://vb-instinct.github.io/schloss-research/reports/schloss-october-2026.html once GitHub Pages is live.)
+An illustrated single-page version is here: **[October 2026 report](reports/schloss-october-2026.html)**. (GitHub shows .html files as code. Download it and open it in a browser, or use the rendered version at https://vb-instinct.github.io/schloss-research/reports/schloss-october-2026.html.)
 
 ## For analysts: the technical notes
 
