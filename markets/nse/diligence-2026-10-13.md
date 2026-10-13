@@ -6,5 +6,5 @@ GSFC: watch. Rs148.40, TCE Rs12,262cr (P/TB 0.48), near debt-free; FCF negative 
 DEN NETWORKS: conditional net-net on March data. Rs25.34, mcap ~Rs1,209cr; sales falling Rs1,307cr -> Rs976cr, OCF -Rs17cr, profit mostly other income, promoters 74.9%, no dividend; Q2 FY27 results due 13 Oct not yet seen.
 HINDUJA GLOBAL SOLUTIONS: not a clean pass; screener P/B 0.20 but goodwill/intangibles unverified, core operating margin 0.8%, quarterly loss, borrowings Rs1,968cr.
 ORIENT PAPER: unverified, data conflict, capex-heavy, not near net-net.
-Skipped (governance/solvency flags, not verified): Rajesh Exports, Reliance Infrastructure, Brightcom, Coffee Day Enterprises; holdcos (Hexa Tradex, Uniphos, Dhunseri Ventures, Vardhman Holdings, Zuari, Nalwa).
+Four other screen names (Rajesh Exports, Reliance Infrastructure, Brightcom, Coffee Day Enterprises) were not examined in this run: no conclusion either way. Also skipped, as holdcos (Hexa Tradex, Uniphos, Dhunseri Ventures, Vardhman Holdings, Zuari, Nalwa).
 Sources: https://www.screener.in/company/GSFC/consolidated/ ; /MAITHANALL/consolidated/ ; /DEN/consolidated/ ; /HGS/consolidated/ ; /ORIENTPPR/consolidated/
