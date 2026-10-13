@@ -4,7 +4,7 @@
 
 **Easiest way to read it:** the rendered site at https://vb-instinct.github.io/schloss-research/
 
-**Snapshot date:** 13 October 2026. This is a one-off first run. Prices and company numbers go stale quickly.
+**Snapshot date:** 13 October 2026. This is the first monthly snapshot. Prices and company numbers go stale quickly.
 
 > **Research notes only. This is not investment, tax or legal advice.** Nothing here is a recommendation to buy or sell anything. No trades were made. Read [limits and caveats](docs/06-limits-and-caveats.md) before using anything on this page.
 
@@ -17,6 +17,8 @@
 - Most flagged companies were **not** examined in depth. This repo says so plainly, name by name.
 
 Full plain-English version: [docs/01 Summary](docs/01-summary.md).
+
+**Track the scans:** [Monthly results](monthly-results.html) - simple market and company tables, dates, coverage and changes.
 
 ## Read in this order
 
