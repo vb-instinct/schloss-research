@@ -10,11 +10,11 @@
 
 ## How much was checked
 
-| Market | Flagged by screening tool (unverified) | Read in the filings | Not examined |
+| Market | Flagged by screening tool (unverified) | Checked to varying depth | Not examined |
 |---|---|---|---|
-| US | 150 strict-tier names | about 14 | most of the 150 |
-| India (NSE) | 122 | about 5, plus some skipped for red flags | most of the 122, and only about 20 of 158 rows were visible on the free tool |
-| Australia (ASX) | 78 | 4 in depth, others lightly | most of the 78 |
+| US | 150 strict-tier names | about 14 (balance sheets from SEC filings) | most of the 150 |
+| India (NSE) | 122 | about 5, based on a free screening site plus earlier filing work; a few more were set aside after a first look | most of the 122, and only about 20 of 158 rows were visible on the free tool |
+| Australia (ASX) | 78 | 4 in depth, others lightly (balance sheets mostly from a data website, not filings) | most of the 78 |
 
 "Not examined" does not mean "rejected" or "approved". It means we do not know.
 
@@ -46,7 +46,7 @@ Based on a free screening site's data plus earlier filing work. Only about 20 of
 | **Hinduja Global Solutions** | Not a clean pass | Cheap ratio, but goodwill is unverified, core margins are tiny and there is a quarterly loss. |
 | **Orient Paper** | Unverified | Data conflicts and heavy spending on equipment. |
 
-Skipped because of governance or solvency warning signs: Rajesh Exports, Reliance Infrastructure, Brightcom, Coffee Day Enterprises. Also skipped: investment holding companies, which need different analysis.
+Four other companies were set aside after a first look because of possible warning signs. Those warning signs are unverified: we did not confirm them, and no conclusion about those companies should be drawn from their being set aside. Also skipped: investment holding companies, which need different analysis.
 
 ## Australia (ASX)
 
