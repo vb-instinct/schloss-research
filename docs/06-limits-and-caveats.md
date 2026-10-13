@@ -10,7 +10,7 @@ This is research written for learning and discussion. It does not consider your 
 
 ## What was NOT done
 
-- **Most flagged companies were not examined.** The screening tools flagged 150 US, 78 Australian and 122 Indian names. Only a few dozen were read in depth. We do not have the full lists.
+- **Most flagged companies were not examined.** The screening tools flagged 150 US, 78 Australian and 122 Indian names. Only a few dozen were checked in depth, and not all of those checks used the company's own filings. We do not have the full lists.
 - **It is not a complete survey of any market.** Free tools showed only part of the Indian list (about 20 of 158 rows). The Australian light check used about 21 names from one website.
 - **No new data refresh for this repo.** The repo reorganises and explains work done on 13 October 2026.
 - **No ten-year history was fully verified** for most companies, although the method calls for it.
@@ -20,7 +20,7 @@ This is research written for learning and discussion. It does not consider your 
 
 | Issue | What it means |
 |---|---|
-| **Vendor data errors** | Screening tools had wrong or stale ratios for several names. We recalculated from filings where we could. |
+| **Vendor data errors** | Screening tools had wrong or stale ratios for several names. We recalculated from filings where we could; for some companies we could only check against other data websites. |
 | **Stale or untimed prices** | Australian prices from a data feed carry no time stamp. US prices are from the 12 October close where checked. Anything else could be out of date. |
 | **Some sources are not official** | A number of balance sheets came from data websites, not the company's own filing. These are flagged in the technical notes. |
 | **Accounting is not cash** | Book value, inventory, receivables and investments can be worth less than their recorded values. |
