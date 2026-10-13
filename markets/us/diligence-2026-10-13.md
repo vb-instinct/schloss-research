@@ -1,3 +1,5 @@
+> **Technical note for analysts.** Dense working notes with shorthand. New here? Start with the [plain-English summary](../../docs/01-summary.md) and [what we found](../../docs/05-what-we-found.md). Figures are a snapshot from 13 October 2026. Research only, not advice.
+
 US strict-tier diligence (13 Oct 2026, research only; closes Oct 12 from stockanalysis.com; balance sheets from SEC filings)
 BOOM: FAILS. Screener P/TBV 0.27 wrong; filing TBV $4.43/sh vs $5.59 -> ~1.26; $187m redeemable NCI senior claim; H1 OCF -$10.3m.
 MYPS (PLAYSTUDIOS): conditional. Post 1:10 reverse split $4.26; TBV ~$7.09/sh -> P/TBV ~0.60; cash $102.7m ~2x mcap (~$52m); NCAV $66.9m, mcap 0.77x so not net-net; H1 rev -7%, op loss -$22.9m, OCF +$9.4m; shrinking, sub-$1 compliance issue. https://www.sec.gov/Archives/edgar/data/1823878/000182387826000052/myps-20260630.htm
