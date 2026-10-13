@@ -1,4 +1,7 @@
 # NSE Schloss-style asset screen
+
+> **Technical note for analysts.** Dense working notes with shorthand. New here? Start with the [plain-English summary](../../docs/01-summary.md) and [what we found](../../docs/05-what-we-found.md). Figures are a snapshot from 13 October 2026. Research only, not advice.
+
 Research snapshot: 13 October 2026. INR; financial amounts in crore rupees unless stated. Quotes below use the completed 12 October session, not the ongoing 13 October session.
 
 ## Answer
