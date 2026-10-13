@@ -11,7 +11,7 @@
 ## The short answer
 
 - Screening tools flagged hundreds of "cheap on paper" companies: about 150 in the US, 78 in Australia and 122 in India.
-- We then read the official filings for a small number of them (roughly 25 companies in total), and rechecked the numbers.
+- We then checked a smaller number of them in more depth, to varying degrees. Some checks used the company's own filings; others relied on data websites that were not verified against filings. Which is which is flagged in the technical notes.
 - **No company passed every test.** Several looked cheap only because a data vendor's number was wrong, or because the assets behind the price were weaker than they first appeared (store leases, unsold inventory, loans owed to others, shrinking sales).
 - A handful are worth a closer look. They are leads for more homework, not conclusions.
 - Most flagged companies were **not** examined in depth. This repo says so plainly, name by name.
