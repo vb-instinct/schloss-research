@@ -1,4 +1,7 @@
 # Corpus source ledger
+
+> **Technical note for analysts.** Dense working notes with shorthand. New here? Start with the [plain-English summary](../docs/01-summary.md) and [what we found](../docs/05-what-we-found.md). Figures are a snapshot from 13 October 2026. Research only, not advice.
+
 Library: https://www.bishoprockcap.com/library/walter-schloss
 
 ## 1. Columbia Business School Upper Level Seminar in value Investing (12 pages)
