@@ -1,0 +1,890 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style>
+@font-face { font-family: "Aime"; src: local("Georgia") format("woff2"); font-weight: 300; font-style: normal; }
+@font-face { font-family: "Aime"; src: local("Georgia") format("woff2"); font-weight: 800; font-style: normal; }
+@font-face { font-family: "KMR Melange Grotesk"; src: local("Georgia") format("truetype"); font-weight: 350; font-style: normal; }
+@font-face { font-family: "KMR Melange Grotesk"; src: local("Georgia") format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "KMR Melange Grotesk"; src: local("Georgia") format("woff2"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "KMR Melange Grotesk"; src: local("Georgia") format("opentype"); font-weight: 600; font-style: normal; }
+@font-face { font-family: "Aime"; src: local("Georgia") format("woff2"); font-weight: 400; font-style: normal; }
+:root {
+    --ds-page: #fbfaf9;
+    --ds-raised: #f4efec;
+    --ds-white: #ffffff;
+    --ds-ink: #251f21;
+    --ds-ink-2: #585254;
+    --ds-ink-3: #969394;
+    --ds-ink-4: #c0bebf;
+    --ds-hairline: #eae9ea;
+    --ds-teal: #73a89a;
+    --ds-red: #ed313e;
+    --ds-red-border: rgb(245 170 174);
+    --ds-hover: color-mix(in srgb, #251f21 5%, transparent);
+    --ds-hover-strong: color-mix(in srgb, #251f21 10%, transparent);
+    --ds-hover-red: color-mix(in srgb, #ed313e 5%, transparent);
+    --ds-scrim: rgb(46 39 41 / 0.45);
+    --ds-shadow-control: 0 1px 2px color-mix(in srgb, #251f21 5%, transparent);
+    --ds-shadow-modal: 0 30px 70px rgb(46 39 41 / 0.28);
+    --ds-font-display: "Aime", Georgia, serif;
+    --ds-font-text: "KMR Melange Grotesk", -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+.box-border{box-sizing:border-box}.flex{display:flex}.inline-flex{display:inline-flex}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[52px\]{height:52px}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.flex-none{flex:none}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.items-center{align-items:center}.justify-center{justify-content:center}.gap-2{gap:.5rem}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:var(--radius)}.border{border-width:1px}.border-0{border-width:0}.border-border{border-color:hsl(var(--border))}.border-destructive\/40{border-color:hsl(var(--destructive)/.4)}.border-ds-hairline{border-color:var(--ds-hairline)}.border-ds-ink{border-color:var(--ds-ink)}.border-ds-redBorder{border-color:var(--ds-red-border)}.border-ds-teal{border-color:var(--ds-teal)}.border-transparent{border-color:transparent}.bg-card{background-color:hsl(var(--card))}.bg-destructive\/10{background-color:hsl(var(--destructive)/.1)}.bg-ds-ink{background-color:var(--ds-ink)}.bg-ds-white{background-color:var(--ds-white)}.bg-foreground{background-color:hsl(var(--foreground))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-secondary{background-color:hsl(var(--secondary))}.bg-transparent{background-color:transparent}.p-2{padding:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.font-text{font-family:KMR Melange Grotesk,-apple-system,Helvetica Neue,Arial,sans-serif}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-sm{font-size:.8125rem}.text-sm,.text-xs{line-height:1.5}.text-xs{font-size:.75rem}.font-medium{font-weight:500}.font-normal{font-weight:400}.leading-none{line-height:1}.tracking-\[-0\.01em\]{letter-spacing:-.01em}.text-background{color:hsl(var(--background))}.text-card-foreground{color:hsl(var(--card-foreground))}.text-destructive{color:hsl(var(--destructive))}.text-ds-ink{color:var(--ds-ink)}.text-ds-page{color:var(--ds-page)}.text-ds-red{color:var(--ds-red)}.text-ds-teal{color:var(--ds-teal)}.text-textPrimary{color:var(--text-primary)}.text-textSecondary{color:var(--text-secondary)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline-offset-4{text-underline-offset:4px}.shadow-ds-control{--tw-shadow:var(--ds-shadow-control);--tw-shadow-colored:var(--ds-shadow-control)}.shadow-ds-control,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.outline{outline-style:solid}.transition-\[background-color\2c border-color\2c color\2c transform\]{transition-property:background-color,border-color,color,transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0) scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1)) rotate(var(--tw-enter-rotate,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0) scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1)) rotate(var(--tw-exit-rotate,0))}}.\[transition-duration\:120ms\]{transition-duration:.12s}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:scale-105:hover,.hover\:scale-\[1\.02\]:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02}.hover\:bg-destructive\/20:hover{background-color:hsl(var(--destructive)/.2)}.hover\:bg-destructive\/5:hover{background-color:hsl(var(--destructive)/.05)}.hover\:bg-ds-hover:hover{background-color:var(--ds-hover)}.hover\:bg-foreground\/90:hover{background-color:hsl(var(--foreground)/.9)}.hover\:bg-muted:hover{background-color:hsl(var(--muted))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28/var(--tw-bg-opacity,1))}.hover\:bg-secondary\/80:hover{background-color:hsl(var(--secondary)/.8)}.hover\:text-textPrimary:hover{color:var(--text-primary)}.hover\:underline:hover{text-decoration-line:underline}.focus-visible\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-2:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus-visible\:ring-ds-ink4:focus-visible{--tw-ring-color:var(--ds-ink-4)}.focus-visible\:ring-ring\/40:focus-visible{--tw-ring-color:hsl(var(--ring)/0.4)}.focus-visible\:ring-offset-2:focus-visible{--tw-ring-offset-width:2px}.active\:scale-100:active{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:bg-ds-hoverStrong:active{background-color:var(--ds-hover-strong)}.disabled\:pointer-events-none:disabled{pointer-events:none}.disabled\:scale-100:disabled{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.disabled\:cursor-default:disabled{cursor:default}.disabled\:border-ds-hairline:disabled{border-color:var(--ds-hairline)}.disabled\:bg-transparent:disabled{background-color:transparent}.disabled\:text-ds-ink4:disabled{color:var(--ds-ink-4)}.disabled\:opacity-50:disabled{opacity:.5}.disabled\:shadow-none:disabled{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media not all and (min-width:768px){.max-md\:flex{display:flex}.max-md\:h-\[52px\]{height:52px}.max-md\:w-full{width:100%}.max-md\:rounded-lg{border-radius:var(--radius)}.max-md\:text-\[15px\]{font-size:15px}.max-md\:hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (min-width:768px){.md\:px-4{padding-left:1rem;padding-right:1rem}}.\[\&_svg\]\:pointer-events-none svg{pointer-events:none}.\[\&_svg\]\:size-4 svg{width:1rem;height:1rem}.\[\&_svg\]\:h-4 svg{height:1rem}.\[\&_svg\]\:w-4 svg{width:1rem}.\[\&_svg\]\:shrink-0 svg{flex-shrink:0}
+
+:root {
+    --file-shadow: 0 1px 2px rgb(37 31 33 / 6%), 0 6px 18px rgb(37 31 33 / 5%);
+    --file-pad-x: 24px;
+    
+    --file-col: 200px;
+    
+    --file-product-col: 300px;
+    
+    --file-text: 14px;
+    --file-small: 12px;
+    
+    --file-button-roll: 320ms;
+    
+    --file-low-stock: #d59b53;
+}
+
+.file-ground {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 24px 16px;
+    background: var(--ds-raised);
+    color: var(--ds-ink);
+    font-family: var(--ds-font-text);
+    font-size: var(--file-text);
+    font-weight: 350;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.file-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 24px var(--file-pad-x);
+    background: var(--ds-page);
+    color: var(--ds-ink);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    font-family: var(--ds-font-text);
+    font-size: var(--file-text);
+    font-weight: 350;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+}
+
+.file-card[data-width="phone"] { max-width: 390px; }
+.file-ground .file-card { border-radius: 24px; box-shadow: var(--file-shadow); }
+.file-card > * { min-width: 0; }
+.file-card a { color: var(--ds-ink); }
+.file-card :focus-visible { outline: 2px solid var(--ds-ink); outline-offset: 2px; }
+
+.file-strong { font-weight: 600; }
+.file-secondary { color: var(--ds-ink-2); }
+.file-known { color: var(--ds-teal); font-weight: 600; }
+.file-unavailable { color: var(--ds-ink-4); text-decoration: line-through; }
+.file-visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+
+.file-header { display: flex; flex-direction: column; gap: 24px; }
+.file-title {
+    margin: 0;
+    font-family: var(--ds-font-display);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+.file-fact { margin: 0; color: var(--ds-ink-2); font-weight: 400; }
+.file-fact.is-known { color: var(--ds-teal); font-weight: 600; }
+.file-intro { margin: 12px 0 0; line-height: 24px; text-wrap: pretty; }
+
+
+.file-group { display: flex; flex-direction: column; gap: 24px; }
+.file-group-label { margin: 0; font: inherit; color: var(--ds-ink-2); }
+.file-group-heading {
+    margin: 0;
+    font-family: var(--ds-font-display);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+
+.file-rows { display: flex; flex-direction: column; }
+.file-row { display: flex; align-items: flex-start; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--ds-hairline); }
+.file-row:last-child { border-bottom: 0; }
+.file-row-slot { flex: none; width: 40px; height: 40px; border-radius: 3px; background: var(--ds-raised); overflow: hidden; }
+.file-row-slot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.file-row-slot.is-number { width: 24px; height: auto; background: none; color: var(--ds-ink-2); }
+.file-row-slot.is-number::after, .file-step-n::after { content: "."; }
+.file-row-main { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.file-row-detail { color: var(--ds-ink-2); }
+.file-row-value { flex: none; font-weight: 600; text-align: right; }
+
+
+.file-facts { display: flex; flex-direction: column; margin: 0; }
+.file-facts > div { display: grid; grid-template-columns: min(var(--file-col), 38%) minmax(0, 1fr); padding: 12px 0; border-bottom: 1px solid var(--ds-hairline); }
+.file-facts > div:last-child { border-bottom: 0; }
+.file-facts dt { color: var(--ds-ink-2); padding-right: 16px; }
+.file-facts dd { margin: 0; }
+
+
+.file-text { display: flex; flex-direction: column; gap: 32px; }
+.file-heading { display: flex; flex-direction: column; }
+.file-p { margin: 0; line-height: 24px; text-wrap: pretty; }
+.file-bullets { margin: 0; padding: 0 0 0 20px; list-style: disc; display: flex; flex-direction: column; gap: 8px; line-height: 24px; }
+.file-bullets li { display: list-item; padding-left: 2px; }
+.file-bar { position: relative; padding-left: 16px; }
+.file-bar::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; border-radius: 1px; background: var(--ds-hairline); }
+.file-key { margin: 0; font-weight: 600; line-height: 24px; }
+.file-figure { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.file-figure img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; background: var(--ds-raised); }
+.file-caption, .file-figure figcaption { margin: 0; color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; text-wrap: pretty; }
+
+.file-photos + .file-caption { margin-top: 12px; }
+.file-card > .file-photos + .file-caption { margin-top: -36px; }
+.file-text > .file-photos + .file-caption { margin-top: -20px; }
+.file-group > .file-photos + .file-caption, .file-chart + .file-caption, .file-table-scroll + .file-caption { margin-top: -12px; }
+.file-rule { margin: 8px 0; border: 0; height: 1px; background: var(--ds-hairline); }
+.file-link { color: var(--ds-ink); overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--ds-ink-4); }
+.file-link:hover { text-decoration-color: currentColor; }
+
+
+.file-callout { display: flex; flex-direction: column; gap: 4px; text-wrap: pretty; }
+.file-callout[data-tone="warning"] { padding: 16px; border-radius: 8px; background: var(--ds-raised); color: var(--ds-ink); }
+.file-callout[data-tone="warning"]::before { display: none; }
+.file-callout[data-tone="danger"] { color: var(--ds-red); }
+.file-callout[data-tone="danger"]::before { background: var(--ds-red); }
+
+
+.file-steps { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+.file-steps li { display: flex; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--ds-hairline); text-wrap: pretty; }
+.file-steps li:last-child { border-bottom: 0; }
+.file-steps li > span:last-child { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.file-step-n { flex: none; width: 24px; color: var(--ds-ink-2); }
+
+
+.file-table-scroll { position: relative; overflow-x: auto; margin-inline: calc(-1 * var(--file-pad-x)); padding-inline: var(--file-pad-x) 0; scroll-padding-inline: var(--file-pad-x) 0; }
+.file-table { table-layout: fixed; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.file-table th, .file-table td { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--ds-hairline); text-align: left; vertical-align: top; font-weight: 350; overflow-wrap: anywhere; }
+.file-table tbody tr:last-child th, .file-table tbody tr:last-child td { border-bottom: 0; }
+.file-table thead th { padding-top: 0; }
+.file-table thead th .file-secondary { margin-left: 8px; }
+.file-table tbody th { color: var(--ds-ink-2); }
+.file-table td.is-best, .file-table td.file-product-price { font-weight: 600; }
+.file-table.is-products { font-variant-numeric: normal; }
+.file-table.is-products thead th { padding-bottom: 20px; vertical-align: top; }
+.file-cell-label { display: block; color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; font-weight: 350; }
+.file-product-head { display: flex; flex-direction: column; }
+.file-product-head-photo { position: relative; display: block; margin-bottom: 12px; }
+.file-product-head-photo img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; background: var(--ds-raised); }
+.file-product-head-photo > .file-product-empty { display: grid; aspect-ratio: 1; border-radius: 12px; background: var(--ds-raised); padding: 16px; }
+
+
+.file-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 8px; min-width: 0; }
+.file-photos img { display: block; width: 100%; min-width: 0; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; background: var(--ds-raised); }
+.file-photos[data-layout="strip"] { display: flex; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.file-photos[data-layout="strip"]::-webkit-scrollbar { display: none; }
+.file-photos[data-layout="strip"] img { flex: 0 0 auto; width: 85%; max-width: 480px; aspect-ratio: auto; scroll-snap-align: start; }
+[data-can-drag], [data-can-drag] .file-product-toggle, [data-can-drag] .file-product-zoom { cursor: grab; }
+[data-drag-scroll] { position: relative; }
+[data-drag-scroll][data-dragging] { scroll-snap-type: none; user-select: none; }
+[data-dragging], [data-dragging] .file-product-toggle, [data-dragging] .file-product-zoom { cursor: grabbing; }
+.file-photos.is-single img { width: 100%; max-width: none; aspect-ratio: auto; }
+
+
+.file-bleed { margin-inline: calc(-1 * var(--file-pad-x)); padding-inline: var(--file-pad-x); scroll-padding-inline: var(--file-pad-x); }
+
+.file-recommendations { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 20px; align-items: start; }
+.file-recommendation { min-width: 0; padding: 20px; border: 1px solid var(--ds-hairline); border-radius: 18px; background: var(--ds-white); }
+.file-recommendation-header { margin-bottom: 20px; }
+.file-recommendation-meta { display: flex; align-items: center; gap: 8px; min-height: 24px; margin-bottom: 10px; }
+.file-recommendation-number { flex: none; margin-right: 4px; color: var(--ds-ink-2); font-size: var(--file-small); font-weight: 500; }
+.file-recommendation-eyebrow { min-width: 0; margin: 0; color: var(--ds-ink-2); font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+.file-recommendation-badge { flex: none; margin-left: auto; padding: 2px 7px; border: 1px solid var(--ds-hairline); border-radius: 4px; background: var(--ds-page); color: var(--ds-ink); font-size: 11px; line-height: 18px; font-weight: 500; }
+.file-recommendation-title { margin: 0; font-family: var(--ds-font-display); font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.025em; overflow-wrap: anywhere; }
+.file-recommendation-photos { margin: 0 0 20px; }
+.file-recommendation-photos .file-photos:not(.is-single) img { aspect-ratio: 4 / 3; }
+.file-recommendation-photos > figcaption { margin-top: 12px; }
+.file-recommendation-content { display: flex; flex-direction: column; gap: 24px; }
+.file-recommendation-content > * { min-width: 0; }
+.file-recommendation-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--ds-hairline); }
+.file-recommendation-links a { display: inline-flex; align-items: center; min-height: 44px; }
+
+
+.file-chart { display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 8px; background: var(--ds-white); font-size: var(--file-small); line-height: 20px; }
+.file-chart-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; color: var(--ds-ink-2); }
+.file-chart-head > span:first-child { min-width: 0; text-wrap: pretty; }
+.file-chart-head > span + span { flex: none; white-space: nowrap; }
+.file-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.file-chart.is-drawn { max-width: 420px; }
+.file-chart-axis { display: flex; justify-content: space-between; gap: 12px; color: var(--ds-ink-2); white-space: nowrap; }
+.file-sparklines { display: flex; flex-direction: column; }
+.file-sparkline { display: grid; grid-template-columns: 1fr 110px 56px; gap: 16px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--ds-hairline); }
+.file-sparkline:last-child { border-bottom: 0; }
+.file-sparkline svg { width: 110px; height: 32px; }
+.file-sparkline-delta { text-align: right; font-weight: 600; }
+.file-sparkline.is-highlight .file-sparkline-name { font-weight: 600; }
+.file-sparkline.is-highlight .file-sparkline-delta { color: var(--ds-teal); font-weight: 600; }
+.file-ranges { display: flex; flex-direction: column; gap: 28px; }
+.file-range { display: grid; grid-template-columns: 104px 1fr; gap: 12px; align-items: center; }
+.file-range-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-range-track { position: relative; height: 20px; }
+.file-range-line { position: absolute; left: 0; right: 0; top: 9px; height: 1px; background: var(--ds-hairline); }
+.file-range-band { position: absolute; top: 7px; height: 6px; border-radius: 3px; background: var(--ds-page); }
+.file-range-now { position: absolute; top: 4px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--file-series, var(--ds-ink-2)); }
+.file-range.is-highlight .file-range-now { background: var(--ds-teal); }
+.file-range-scale { display: grid; grid-template-columns: 104px 1fr; gap: 12px; }
+.file-stack-bar { display: flex; height: 16px; gap: 2px; border-radius: 3px; overflow: hidden; }
+.file-stack-parts { display: flex; flex-direction: column; }
+.file-stack-part { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--ds-hairline); }
+.file-stack-part:last-child { border-bottom: 0; }
+.file-stack-swatch { flex: none; width: 10px; height: 10px; border-radius: 2px; box-shadow: inset 0 0 0 1px var(--ds-hairline); }
+.file-stack-part span:nth-child(2) { flex: 1; }
+.file-stack-share { color: var(--ds-ink-2); }
+
+
+.file-button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    padding: 0 16px;
+    border: 1px solid var(--ds-hairline);
+    border-radius: 4px;
+    background: var(--ds-white);
+    color: var(--ds-ink);
+    font: inherit;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    text-decoration: none;
+    align-self: flex-start;
+    max-width: 100%;
+    box-shadow: var(--ds-shadow-control);
+    cursor: pointer;
+    transition: background-color 120ms, border-color 120ms, color 120ms, transform 120ms;
+}
+.file-button.is-compact { padding: 0 16px; }
+
+.file-button.is-pill { border-radius: 999px; --file-button-icon-pad: 10px; }
+.file-button.is-pill:has(> svg:first-child, > .file-button-slot > .file-button-face:last-child > svg:first-child) { padding-inline-start: var(--file-button-icon-pad); }
+.file-button.is-pill:has(> svg:last-child, > .file-button-slot > .file-button-face:last-child > svg:last-child) { padding-inline-end: var(--file-button-icon-pad); }
+
+.file-button[data-state] { overflow: hidden; --file-button-inset: 8px; }
+.file-button-slot { display: inline-grid; grid-template-columns: minmax(0, auto); min-width: 0; transition: width var(--file-button-roll) cubic-bezier(0.2, 0.8, 0.2, 1); }
+.file-button-face { grid-area: 1 / 1; display: inline-flex; align-items: center; gap: 8px; width: max-content; max-width: 100%; justify-self: start; }
+
+.file-button-label.is-short { display: none; }
+@container file-actions (width < 150px) { .file-button-face:has(> .is-short) > .file-button-label:not(.is-short) { display: none; } .file-button-label.is-short { display: inline; } }
+
+.file-button-face.is-leaving { animation: file-button-out var(--file-button-roll) cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.file-button-face.is-entering { animation: file-button-in var(--file-button-roll) cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes file-button-out { to { transform: translateY(calc(-100% - var(--file-button-inset))); opacity: 0; } }
+@keyframes file-button-in { from { transform: translateY(calc(100% + var(--file-button-inset))); } }
+.file-spin { animation: file-spin 900ms linear infinite; }
+@keyframes file-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .file-button-slot { transition: none; } .file-button-face.is-entering, .file-spin { animation: none; } .file-button-face.is-leaving { display: none; } }
+.file-button svg { flex: none; }
+
+.file-button > span:not(.file-button-slot), .file-button-label { min-width: 0; overflow-x: clip; text-overflow: ellipsis; }
+@media (hover: hover) { .file-button:hover { transform: scale(1.05); } }
+.file-button[data-variant="primary"] { background: var(--ds-ink); border-color: var(--ds-ink); color: var(--ds-page); }
+.file-button[data-variant="ghost"] { background: transparent; border-color: transparent; box-shadow: none; }
+.file-button[aria-pressed="true"] { background: var(--ds-teal); border-color: var(--ds-teal); color: var(--ds-white); }
+.file-button:disabled:not([data-state]) { background: transparent; border-color: var(--ds-hairline); color: var(--ds-ink-4); box-shadow: none; cursor: default; transform: none; }
+
+.file-button[data-state]:disabled { cursor: default; transform: none; }
+.file-button.is-unavailable:disabled { text-decoration: line-through; }
+.file-control { display: flex; flex-direction: column; gap: 24px; }
+.file-control-head { display: flex; justify-content: space-between; gap: 16px; }
+.file-control-label { color: var(--ds-ink-2); }
+.file-choice-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.file-field {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--ds-hairline);
+    border-radius: 4px;
+    background: var(--ds-white);
+    color: inherit;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    outline: none;
+}
+.file-field:focus { border-color: var(--ds-teal); }
+.file-slider { width: 100%; height: 2px; margin: 8px 0; appearance: none; -webkit-appearance: none; border-radius: 1px; background: linear-gradient(to right, var(--ds-ink) var(--file-slider-fill, 50%), var(--ds-hairline) var(--file-slider-fill, 50%)); outline: none; accent-color: var(--ds-ink); }
+.file-slider::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--ds-white); border: 1px solid var(--ds-hairline); box-shadow: var(--ds-shadow-control); cursor: pointer; }
+.file-slider::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--ds-white); border: 1px solid var(--ds-hairline); cursor: pointer; }
+
+
+.file-closing { margin: 0; color: var(--ds-ink-2); }
+
+
+.file-wordmark { display: block; color: var(--ds-ink); }
+
+
+.file-product { position: relative; display: flex; flex-direction: column; min-width: 0; }
+.file-product-toggle, .file-product-preview {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+.file-product-preview { cursor: default; }
+@media (hover: hover) { .file-product-toggle:hover .file-product-name { text-decoration: underline; text-underline-offset: 3px; } }
+.file-product.is-card { gap: 20px; }
+
+.file-group > .file-product.is-card + .file-product.is-card { margin-top: 24px; padding-top: 48px; border-top: 1px solid var(--ds-hairline); }
+.file-product-media { position: relative; min-width: 0; display: flex; flex-direction: column; gap: 8px; container-type: inline-size; }
+
+.file-product-media > .file-photos:not(.is-single) { height: min(420px, 100cqw); }
+.file-product-media > .file-photos img { width: auto; height: 100%; max-width: none; object-fit: contain; border-radius: 12px; }
+.file-product-media > .file-photos.is-single img { width: 100%; height: auto; max-height: calc(100cqw * 4 / 3); object-fit: cover; }
+
+.file-product-zoom { all: unset; box-sizing: border-box; display: block; flex: none; border-radius: 12px; cursor: zoom-in; }
+.file-photos:not(.is-single) > .file-product-zoom { height: 100%; }
+.file-photos.is-single > .file-product-zoom { width: 100%; }
+.file-product-thumbs { display: none; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 1px; margin: -1px; }
+.file-product-thumbs::-webkit-scrollbar { display: none; }
+.file-product-thumb { all: unset; box-sizing: border-box; flex: 0 0 auto; display: block; width: 48px; height: 48px; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 0 0 1px var(--ds-hairline); }
+.file-product-thumb[aria-pressed="true"] { box-shadow: 0 0 0 1px var(--ds-ink-3); }
+.file-product-thumbs img { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--ds-raised); }
+.file-product-photo { position: relative; display: block; width: 100%; container-type: inline-size; }
+.file-product-photo img, .file-product-photo .file-product-empty { width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 12px; background: var(--ds-raised); }
+.file-product-photo img { display: block; height: auto; max-height: calc(100cqw * 4 / 3); aspect-ratio: auto; }
+
+.file-product.is-tile .file-product-photo img { aspect-ratio: 1; object-fit: cover; }
+.file-product.is-tile .file-product-photo .file-product-empty { aspect-ratio: 1; }
+.file-product-empty { display: grid; place-items: center; color: var(--ds-ink-2); text-align: center; padding: 40px 16px 16px; box-sizing: border-box; }
+.file-tags { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; gap: 4px; align-items: center; }
+.file-pill { box-sizing: border-box; min-width: 24px; height: 24px; padding: 0 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; background: var(--ds-ink); color: var(--ds-white); font-size: 14px; font-weight: 500; line-height: 1; letter-spacing: -0.01em; }
+.file-pill.is-pick { background: var(--ds-ink); }
+.file-badge { box-sizing: border-box; height: 24px; padding: 0 8px; display: inline-flex; align-items: center; border-radius: 4px; background: var(--ds-white); color: var(--ds-ink); font-size: 14px; font-weight: 500; line-height: 1; letter-spacing: -0.01em; box-shadow: 0 1px 2px rgb(37 31 33 / 8%); min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-product-line { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; width: 100%; min-width: 0; }
+.file-product-name { flex: 1; min-width: 0; font-weight: 600; text-wrap: pretty; }
+.file-product .file-product-name { overflow-wrap: break-word; }
+.file-product-toggle .file-product-note, .file-product-preview .file-product-note { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.file-product-price { flex: none; font-weight: 600; color: var(--ds-teal); }
+.file-product-brand { color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; }
+
+.file-product.is-tile .file-product-brand { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.file-product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+.file-product-carousel { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.file-product-carousel::-webkit-scrollbar { display: none; }
+.file-product-carousel > .file-product { flex: none; width: clamp(200px, 29vw, 320px); scroll-snap-align: start; }
+
+
+.file-product-detail { display: flex; flex-direction: column; gap: 24px; }
+.file-product-gallery { position: relative; min-width: 0; container-type: inline-size; }
+.file-product-gallery .file-photos { overscroll-behavior-x: contain; scroll-snap-type: none; border-radius: 12px; }
+.file-product-gallery .file-photos:not(.is-single) { height: min(360px, 100cqw); }
+.file-product-gallery .file-photos img { object-fit: contain; max-width: none; scroll-snap-align: none; border-radius: 12px; }
+.file-product-gallery .file-photos:not(.is-single) img { width: auto; height: 100%; }
+.file-product-gallery .file-photos.is-single img { max-height: calc(100cqw * 4 / 3); object-fit: cover; }
+.file-product-gallery > .file-product-empty { width: 100%; aspect-ratio: 1; background: var(--ds-raised); border-radius: 12px; }
+.file-product-info { min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.file-product-copy { display: flex; flex-direction: column; }
+.file-product-note { margin: 8px 0 0; text-wrap: pretty; }
+.file-product-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; container: file-actions / inline-size; }
+.file-product > .file-product-actions { margin-top: auto; padding-top: 14px; }
+.file-product.is-card > .file-product-actions { padding-top: 2px; }
+.file-product-actions .file-caption { margin: 0; font-size: 12px; line-height: 18px; }
+.file-product-actions .file-caption button { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 44px; }
+
+.file-product-source { display: block; }
+
+.file-product-source svg { display: inline-block; vertical-align: -0.125em; margin-left: 3px; }
+.file-product-detail .file-product-name { font-size: 22px; line-height: 1.25; }
+.file-product-modal { box-sizing: border-box; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; border-radius: 0; padding: 0 24px 24px; border: 0; background: var(--ds-white); color: var(--ds-ink); box-shadow: var(--ds-shadow-modal); overflow: auto; overscroll-behavior: contain; font-family: var(--ds-font-text); font-size: var(--file-text); font-weight: 350; line-height: 24px; letter-spacing: -0.01em; }
+.file-product-modal:focus { outline: none; }
+.file-product-modal::backdrop { background: var(--ds-scrim); }
+.file-product-modal-header { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: flex-end; margin-inline: -24px; padding: 12px; background: var(--ds-white); }
+.file-product-close { flex: none; width: 32px; padding: 0; }
+.file-product-modal :focus-visible { outline: 2px solid var(--ds-ink); outline-offset: 2px; }
+
+.file-product-zoom:focus-visible { outline-offset: -2px; }
+
+
+.file-variants { display: flex; flex-direction: column; gap: 14px; }
+.file-variant { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.file-variant-label { display: flex; gap: 6px; align-items: baseline; color: var(--ds-ink-2); }
+.file-variant-label b { font-weight: 400; color: var(--ds-ink); }
+.file-variant-label em { font-style: normal; color: var(--ds-ink-3); }
+.file-swatches { display: flex; flex-wrap: wrap; gap: 10px; padding: 3px 0 0 3px; }
+
+.file-swatch, .file-dot { all: unset; position: relative; box-sizing: border-box; flex: none; border-radius: 50%; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ds-ink) 12%, transparent); }
+.file-swatch { width: 24px; height: 24px; cursor: pointer; }
+.file-swatch::after, .file-dot::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; box-shadow: 0 0 0 1px transparent; transition: box-shadow 120ms; }
+.file-swatch[aria-pressed="true"]::after { box-shadow: 0 0 0 1.25px var(--ds-ink); }
+.file-swatch.is-out::before { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1.5px; background: var(--ds-white); transform: translateX(-50%) rotate(45deg); box-shadow: 0 0 0 0.5px color-mix(in srgb, var(--ds-ink) 25%, transparent); }
+.file-swatch:focus-visible, .file-dot:focus-visible { outline: none; }
+.file-swatch:focus-visible::after, .file-dot:focus-visible::after { box-shadow: 0 0 0 2px var(--ds-ink); }
+.file-sizes { display: flex; flex-wrap: wrap; gap: 6px; }
+.file-size { height: 28px; min-width: 36px; padding: 0 10px; font-size: 13px; }
+.file-size[aria-pressed="true"] { background: var(--ds-ink); border-color: var(--ds-ink); color: var(--ds-page); }
+.file-stock { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; }
+.file-stock::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--ds-ink-4); }
+.file-stock.is-in::before { background: var(--ds-teal); }
+.file-stock.is-low::before { background: var(--file-low-stock); }
+.file-stock.is-out { color: var(--ds-ink); }
+.file-stock.is-out::before { background: var(--ds-ink); }
+.file-price-was { margin-left: 6px; color: var(--ds-ink-3); font-weight: 350; text-decoration: line-through; }
+
+.file-dots { display: flex; align-items: center; gap: 6px; min-width: 0; min-height: 20px; }
+.file-dot { width: 16px; height: 16px; }
+button.file-dot { cursor: pointer; }
+.file-dot.is-current::after { box-shadow: 0 0 0 1px var(--ds-ink); }
+.file-dots-more { margin-left: 2px; color: var(--ds-ink-3); font-size: var(--file-small); line-height: 20px; }
+.file-dots-label { min-width: 0; margin-left: 4px; overflow: hidden; color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; white-space: nowrap; text-overflow: ellipsis; }
+.file-product.is-tile > .file-dots, .file-table.is-products thead .file-dots { margin-top: 8px; }
+
+
+.file-viewer { box-sizing: border-box; position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; flex-direction: column; overflow: hidden; background: var(--ds-ink); color: var(--ds-white); font-family: var(--ds-font-text); font-size: var(--file-text); font-weight: 350; line-height: 24px; letter-spacing: -0.01em; touch-action: none; overscroll-behavior: contain; }
+
+.file-viewer[open] { display: flex; }
+.file-viewer:focus { outline: none; }
+.file-viewer::backdrop { background: var(--ds-ink); }
+.file-viewer-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: calc(12px + env(safe-area-inset-top, 0px)) 12px 8px 20px; color: color-mix(in srgb, var(--ds-white) 72%, transparent); font-size: 13px; line-height: 20px; }
+.file-viewer-title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.file-viewer-title b { color: var(--ds-white); font-weight: 500; }
+.file-viewer-stage { position: relative; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px 16px calc(24px + env(safe-area-inset-bottom, 0px)); overflow: hidden; touch-action: none; }
+.file-viewer-stage img { display: block; max-width: 100%; max-height: 100%; border-radius: 12px; object-fit: contain; user-select: none; -webkit-user-drag: none; cursor: zoom-in; will-change: transform; animation: file-viewer-in 200ms ease-out; }
+.file-viewer-stage[data-zoomed] img { cursor: grab; }
+@keyframes file-viewer-in { from { opacity: 0.35; } }
+.file-viewer-button { all: unset; box-sizing: border-box; display: inline-grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 999px; background: color-mix(in srgb, var(--ds-white) 10%, transparent); color: var(--ds-white); cursor: pointer; transition: background-color 120ms; }
+@media (hover: hover) { .file-viewer-button:not(:disabled):hover { background: color-mix(in srgb, var(--ds-white) 18%, transparent); } }
+.file-viewer .file-viewer-button:focus-visible { outline: 2px solid var(--ds-white); outline-offset: 2px; }
+.file-viewer-button:disabled { opacity: 0.3; cursor: default; }
+.file-viewer-prev, .file-viewer-next { position: absolute; top: 50%; transform: translateY(-50%); }
+.file-viewer-prev { left: 16px; }
+.file-viewer-next { right: 16px; }
+.file-viewer-dots { position: absolute; left: 0; right: 0; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: center; gap: 6px; pointer-events: none; }
+.file-viewer-dots > span { width: 6px; height: 6px; border-radius: 50%; background: color-mix(in srgb, var(--ds-white) 35%, transparent); }
+.file-viewer-dots > .is-current { background: var(--ds-white); }
+@media (prefers-reduced-motion: reduce) { .file-viewer-stage img { animation: none; } }
+
+
+.file-image {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 16px;
+    background: var(--ds-white);
+    color: var(--ds-ink);
+    border-radius: 24px;
+    overflow: hidden;
+    font-family: var(--ds-font-text);
+    font-size: var(--file-text);
+    font-weight: 350;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+}
+.file-image[data-ratio="portrait"] { width: 390px; height: 480px; }
+.file-image[data-ratio="square"] { width: 390px; height: 390px; }
+.file-image[data-ratio="landscape"] { width: 480px; height: 360px; }
+.file-image-body { display: flex; flex-direction: column; gap: 36px; flex: 1; min-height: 0; overflow: hidden; }
+.file-image-body > .file-card { padding: 0; max-width: none; background: transparent; }
+.file-image-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex: none; margin: 0 0 -2px; padding: 16px 0 4px; border-top: 1px solid var(--ds-hairline); color: var(--ds-ink-2); }
+.file-image-footer > span { color: var(--ds-ink-3); }
+.file-image-footer > span:empty { display: none; }
+.file-image-footer > span:empty + .file-wordmark { margin-left: auto; }
+
+
+.file-product-image-photo { position: relative; flex: 1; min-height: 0; }
+.file-product-image-photo img, .file-product-image-photo .file-product-empty { width: 100%; height: 100%; object-fit: contain; border-radius: 20px; background: var(--ds-raised); aspect-ratio: auto; }
+.file-product-image-photo img { display: block; }
+.file-product-image-tag { position: absolute; top: 12px; left: 12px; box-sizing: border-box; min-width: 32px; height: 32px; padding: 0 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; background: var(--ds-ink); color: var(--ds-white); font-size: 18px; font-weight: 500; line-height: 1; letter-spacing: -0.01em; }
+.file-product-image-tag.is-pick { background: var(--ds-ink); }
+.file-product-image-copy { display: flex; flex-direction: column; gap: 2px; flex: none; }
+.file-product-image .file-image-body { gap: 16px; }
+.file-product-image .file-image-footer { padding-top: 10px; font-size: 12px; line-height: 18px; }
+.file-product-image .file-product-name { overflow-wrap: break-word; }
+.file-product-image-variant { display: flex; align-items: center; gap: 12px; min-width: 0; margin-top: 6px; }
+
+.file-product-image-variant .file-dots { gap: 5px; padding: 1px 0 1px 4px; }
+.file-product-image-variant .file-dot { width: 14px; height: 14px; }
+.file-product-image-size { flex: none; margin-left: auto; color: var(--ds-ink-2); font-size: var(--file-small); line-height: 20px; }
+
+
+.file-image .file-card { font-size: var(--file-small); line-height: 20px; }
+.file-image .file-title { font-size: 24px; }
+.file-image .file-group-heading { font-size: 18px; }
+.file-image .file-intro, .file-image .file-p, .file-image .file-bullets, .file-image .file-key { line-height: 20px; }
+
+
+@media (min-width: 768px) {
+    .file-ground { padding: 36px; }
+    .file-card { --file-pad-x: 36px; padding: 36px; }
+    .file-card[data-width="phone"] { --file-pad-x: 24px; padding: 24px 24px; }
+    .file-title { font-size: 36px; }
+    .file-intro, .file-closing, .file-p { max-width: 72ch; }
+    .file-product-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+    .file-product-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 28px; align-items: start; }
+    .file-product-modal { width: min(920px, calc(100% - 32px)); height: auto; max-height: calc(100dvh - 32px); margin: auto; border-radius: 16px; }
+    .file-product.is-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+    .file-bleed { padding-inline: var(--file-pad-x) 0; scroll-padding-inline: var(--file-pad-x) 0; }
+    .file-product-media > .file-photos, .file-product-gallery > .file-photos { margin-inline: 0; padding-inline: 0; }
+    .file-product-detail .file-product-info { position: sticky; top: 56px; }
+    .file-product-gallery .file-photos { display: grid; grid-template-columns: minmax(0, 1fr); height: auto; overflow: visible; }
+    .file-product-gallery .file-photos:not(.is-single) { height: auto; }
+    .file-product-gallery .file-photos img, .file-product-gallery .file-photos:not(.is-single) img { width: 100%; height: auto; }
+    .file-product-media > .file-photos { display: block; overflow: visible; height: auto; }
+    .file-product-media > .file-photos:not(.is-single) { height: auto; }
+    .file-product-media > .file-photos > .file-product-zoom:not(:first-child) { display: none; }
+    .file-product-media > .file-photos > .file-product-zoom, .file-product-gallery .file-photos > .file-product-zoom { width: 100%; height: auto; }
+    .file-product-media > .file-photos img { width: 100%; height: auto; max-height: calc(100cqw * 4 / 3); object-fit: cover; }
+    .file-product-thumbs { display: flex; }
+}
+
+@media (max-width: 600px) {
+    .file-card .file-button, .file-card .file-product-toggle { min-height: 44px; }
+    .file-card .file-button[data-state] { --file-button-inset: 14px; }
+    .file-card .file-button.is-pill { --file-button-icon-pad: 14px; }
+    .file-product-close { width: 44px; min-height: 44px; }
+    .file-swatches { gap: 12px; }
+    .file-size, .file-card .file-size { height: 32px; min-height: 32px; min-width: 38px; }
+    .file-viewer-prev, .file-viewer-next { display: none; }
+}
+
+@media print {
+    .file-ground { background: var(--ds-white); padding: 0; }
+    .file-card, .file-ground .file-card { box-shadow: none; max-width: none; border-radius: 0; }
+    .file-photos, .file-table-scroll { overflow: visible; }
+}
+
+.file-figure[data-fit="contain"] img { aspect-ratio: auto; object-fit: contain; }
+.file-data-table { min-width: 100%; }
+.file-data-table caption { text-align: start; color: var(--ds-ink-2); padding-bottom: 16px; }
+.file-data-table th, .file-data-table td { min-width: 120px; max-width: 32ch; white-space: normal; overflow-wrap: anywhere; }
+.file-data-table [data-numeric] { text-align: end; font-variant-numeric: tabular-nums; }
+.file-data-table th button { background: none; border: 0; padding: 10px 0; color: inherit; font: inherit; text-align: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.file-chart details { border-block: 1px solid var(--ds-hairline); padding: 12px 0; }
+.file-chart details > summary { cursor: pointer; min-height: 24px; padding: 10px 0; font-weight: 600; }
+.file-chart details > :not(summary) { margin-top: 12px; }
+@media print {
+    .file-data-table { min-width: 0; }
+    .file-data-table th, .file-data-table td { min-width: 0; }
+}
+.file-scaled-chart { max-width: 640px; width: 100%; box-sizing: border-box; }
+.file-signed-bars { display: grid; gap: 14px; }
+.file-signed-bars > div { display: grid; grid-template-columns: minmax(50px, 1fr) minmax(60px, 2fr) minmax(30px, auto); align-items: center; gap: 12px; }
+.file-signed-bars strong { text-align: end; font-weight: 600; }
+.file-bar-labels { display: flex; text-align: center; }
+.file-bar-labels > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.file-chart-readout { margin: 0; min-height: 40px; color: var(--ds-ink-2); }
+.file-scaled-chart .file-chart-axis { white-space: normal; }
+.file-scaled-chart .file-chart-axis span:last-child { text-align: end; }
+.file-scaled-chart [tabindex]:focus { outline: none; }
+.file-scaled-chart [tabindex]:focus-visible circle:last-child { stroke-width: 3; }
+
+.file-image .file-chart details, .file-image .file-chart-readout { display: none; }
+</style><style>html, body { margin: 0; } html { background: transparent; } body { width: 100%; }</style><style>
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: var(--ds-page);
+}
+* {
+  box-sizing: border-box;
+}
+section {
+  scroll-margin-top: 20px;
+}
+.jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  border-block: 1px solid var(--ds-hairline);
+  margin: 24px 0;
+}
+.jump-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ds-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.jump-nav a:hover {
+  text-decoration: underline;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ds-teal);
+  outline-offset: 4px;
+}
+.summary-grid,
+.record-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.summary {
+  border-top: 2px solid var(--ds-teal);
+  padding: 16px 0;
+}
+.summary h3,
+.record h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.metric {
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--ds-teal);
+  font-weight: 600;
+}
+.metric-label {
+  font-weight: 600;
+}
+.summary p {
+  margin: 12px 0;
+}
+.record {
+  padding: 18px;
+  border: 1px solid var(--ds-hairline);
+  border-radius: 8px;
+  min-width: 0;
+}
+.record dl {
+  margin: 0;
+}
+.record dl > div {
+  margin: 10px 0;
+}
+.record dt {
+  font-size: 12px;
+  color: var(--ds-ink-2);
+}
+.record dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.document {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.document p,
+.document li {
+  line-height: 1.75;
+}
+.document ul,
+.document ol {
+  padding-left: 24px;
+}
+.document li {
+  margin: 8px 0;
+}
+.document h1,
+.document h2,
+.document h3 {
+  margin-top: 28px;
+}
+.document strong {
+  font-weight: 600;
+}
+.document a {
+  overflow-wrap: anywhere;
+}
+details {
+  border-block: 1px solid var(--ds-hairline);
+  padding: 8px 0;
+}
+summary {
+  min-height: 44px;
+  cursor: pointer;
+  display: list-item;
+  padding: 12px 0;
+  font-weight: 600;
+}
+figure {
+  margin: 24px 0;
+}
+figure img {
+  max-height: 320px;
+  object-fit: cover;
+}
+@media (min-width: 760px) {
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .record-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media print {
+  details > * {
+    display: block !important;
+  }
+  .jump-nav {
+    display: none;
+  }
+  figure img {
+    max-height: 180px;
+  }
+  .record {
+    break-inside: avoid;
+  }
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.coverage-tag {
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--ds-hairline);
+  color: var(--ds-ink-2);
+}
+
+html,body,#root{margin:0;min-height:100%;}body{background:var(--ds-page)}*{box-sizing:border-box}section{scroll-margin-top:20px}.jump-nav{display:flex;flex-wrap:wrap;gap:4px 20px;border-block:1px solid var(--ds-hairline);margin:24px 0}.jump-nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--ds-ink);font-weight:600;text-decoration:none}.jump-nav a:hover{text-decoration:underline}a:focus-visible,summary:focus-visible{outline:2px solid var(--ds-teal);outline-offset:4px}.summary-grid,.record-grid{display:grid;grid-template-columns:1fr;gap:20px}.summary{border-top:2px solid var(--ds-teal);padding:16px 0}.summary h3,.record h3{margin:0 0 12px;font-size:16px;font-weight:600}.metric{font-size:44px;line-height:1.2;color:var(--ds-teal);font-weight:600}.metric-label{font-weight:600}.summary p{margin:12px 0}.record{padding:18px;border:1px solid var(--ds-hairline);border-radius:8px;min-width:0}.record dl{margin:0}.record dl>div{margin:10px 0}.record dt{font-size:12px;color:var(--ds-ink-2)}.record dd{margin:2px 0 0;font-weight:600;overflow-wrap:anywhere}.document{overflow-wrap:anywhere;min-width:0}.document p,.document li{line-height:1.75}.document ul,.document ol{padding-left:24px}.document li{margin:8px 0}.document h1,.document h2,.document h3{margin-top:28px}.document strong{font-weight:600}.document a{overflow-wrap:anywhere}details{border-block:1px solid var(--ds-hairline);padding:8px 0}summary{min-height:44px;cursor:pointer;display:list-item;padding:12px 0;font-weight:600}figure{margin:24px 0}figure img{max-height:320px;object-fit:cover}@media(min-width:760px){.summary-grid{grid-template-columns:repeat(3,1fr);gap:28px}.record-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media print{details>*{display:block!important}.jump-nav{display:none}figure img{max-height:180px}.record{break-inside:avoid}.summary-grid{grid-template-columns:repeat(3,1fr)}}
+.coverage-tag{font-size:12px;line-height:1.6;padding:10px 0;border-bottom:1px solid var(--ds-hairline);color:var(--ds-ink-2)}
+</style><title>Schloss: beyond the cheap ratios | October 2026</title></head><body><main class="file-card" data-width="fluid"><header class="file-header"><h1 class="file-title">Schloss: beyond the cheap ratios</h1><p class="file-fact">October 2026 · ASX / US / NSE</p><p class="file-intro">No unconditional buy is certified in this run. The useful result is a better research list, with false positives removed and asset risks made visible.</p></header><aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Research, not advice</span><span>Historical research snapshot dated 13 October 2026. No trades placed. Quotes and accounts are not live. Screener ratios are discovery leads, not filing-verified investment conclusions.</span></aside><nav aria-label="Report sections" class="jump-nav"><a href="#findings">Findings</a><a href="#framework">Framework</a><a href="#screen">Screen results</a><a href="#us">US</a><a href="#nse">NSE</a><a href="#asx">ASX</a><a href="#library">Sources</a></nav><figure class="file-figure" data-fit="cover"><figcaption>Conceptual illustration. Not a company asset or valuation model.</figcaption></figure><section id="findings"><section aria-labelledby=":R5:" class="file-group"><h2 class="file-group-heading" id=":R5:">The result in one minute</h2><div class="summary-grid"><article class="summary"><h3>US</h3><div class="metric">150</div><p class="metric-label">Vendor strict-tier hits</p><p>5 names checked in the strict-tier update; 8 NYSE/Nasdaq operating companies had earlier filing review. BOOM fails after recalculation. CATO and MYPS remain conditional.</p></article><article class="summary"><h3>ASX</h3><div class="metric">78</div><p class="metric-label">Vendor strict-tier hits</p><p>4 names received detailed strict-tier review. IRI is the strongest conditional research case; OMH is a specialist commodity watch. None is a verified net-net.</p></article><article class="summary"><h3>NSE</h3><div class="metric">122</div><p class="metric-label">Book-value proxy hits, not tangible book</p><p>158 base-screen matches, about 20 rows visible in the later free-tier review. Audited work covers DEN, GSFC and Maithan. Coverage is not a full-universe diligence census.</p></article></div><div class="file-heading"><span class="file-strong">The discount is the start, not the answer</span></div><p class="file-p">Cash burn, shrinking businesses, leases, minority claims and asset quality explain much of the apparent cheapness. Maithan offers the strongest investment-asset case in the later NSE update; DEN remains the March-balance-sheet net-net case. IRI has the strongest ASX balance sheet among the four detailed checks. These are priorities for further work, not buys.</p><aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Read the evidence in order</span><span>The rebuilt screen supersedes the initial discovery coverage. Filing recalculations override vendor ratios. Earlier detailed US/NSE notes are retained below as supporting evidence, with their dates and limits. ASX's detailed strict-tier report replaces the earlier IRI summary. Rankings from different stages are not a single portfolio ranking.</span></aside></section></section><section id="framework"><section aria-labelledby=":Re:" class="file-group"><h2 class="file-group-heading" id=":Re:">Framework and criteria</h2><div class="document"><div class="file-heading"><span class="file-strong">Walter Schloss: framework and implementation</span></div><p class="file-p">13 October 2026. Research, not personalized financial advice. No trades have been placed.</p><div class="file-heading"><span class="file-strong">What the complete library changes</span></div><p class="file-p">Schloss is an asset-discount investor, not a low-P/E stock picker and not a concentrated quality-growth investor. He starts with today's assets and price, checks the liabilities, company history, cash flow, ownership and downside, and accepts an uncertain recovery timetable. A cheap ratio opens a file; it does not close the investment decision.</p><p class="file-p">All 33 linked PDFs, 182 pages, were retrieved and read. Image scans required OCR; the 47-year results table and all six pages of the weak industrial-average scan were inspected visually. Two Graham reminiscence files duplicate the same essay. The 65-page item titled Part I includes Part II. The video entry is a written summary of a talk, not the original recording. The library provides a three-page excerpt of Financial Intelligence Report, not the seven-page issue listed in its contents. Every supplied article is covered; this does not claim every underlying publication or linked video was reviewed.</p><div class="file-heading"><span class="file-strong">Original principles</span></div><ol>
+<li>Relate price to conservative intrinsic worth, not merely to another expensive stock. A share is ownership of a business.</li>
+<li>Start with book and tangible assets. The original November 1993 Columbia checklist explicitly asks whether goodwill is in book. Assets are generally less volatile than earnings, but can still be impaired.</li>
+<li>Prefer little or no debt. The March 1994 memo says debt should not equal 100% of equity. Bankruptcy, leases, pensions and obligations can defeat apparently cheap assets.</li>
+<li>Investigate why a price is depressed. Review long price history, company history, cash flow, income, margins, competitors, insider ownership and downside versus upside. A multi-year low is a lead, not proof of value.</li>
+<li>Read annual reports, quarterly reports, proxies and footnotes. Look for honest, shareholder-oriented management, not persuasive presentations. Insider ownership can align interests but cannot guarantee minority shareholders receive value.</li>
+<li>Diversify because individual outcomes are uncertain. His talks describe dozens to roughly 100 holdings, not a three-stock conviction portfolio. Small initial positions and room to add avoided overconcentration.</li>
+<li>Be patient. An average four-year holding period is historical experience, not a promised exit deadline. Monthly research does not mean monthly portfolio turnover.</li>
+<li>Reassess on changed facts. Scale buying only when value remains intact, not automatically because price falls. Intertan bought around half book and sold at a loss is a documented value-trap example.</li>
+<li>Sell when the price becomes reasonable against revised value. The original 1994 memo explicitly warns against automatically selling simply because a stock has risen 50%.</li>
+<li>Keep costs and emotions low. Avoid investment leverage, tips, imitation and macroeconomic forecasts as the basis for a purchase.</li>
+</ol><div class="file-heading"><span class="file-strong">What is not an original universal rule</span></div><p class="file-p">The numerical thresholds below are a reproducible conservative adaptation. Schloss evolved from net-nets to half/two-thirds of book, then sometimes book or a small premium and special situations. He did not publish one invariant global screener.</p><p class="file-p">The AAII May 2009 reconstruction uses price below book, price within 10% of a 52-week low, insider ownership above the database median, zero long-term debt in both annual and quarterly reports, a seven-year price-history proxy, exclusion of ADRs and financials. It calls these its translation of his approach. Do not present them as his precise rules. It also treats book as liquidation value too confidently; asset realizability, liquidation costs and minority rights control actual proceeds.</p><p class="file-p">Financials and miners are not blanket Schloss prohibitions: the corpus contains ASARCO, Cleveland Cliffs and insurers. They are excluded from this simple operating-company screen because their assets require different analysis. He generally preferred US companies and worried about foreign accounting/politics; British exceptions and foreign holdings appear in the corpus. ASX and NSE are adaptations, not markets Schloss endorsed. The OID interview explicitly excludes tobacco for his own ethical reasons.</p><div class="file-heading"><span class="file-strong">Reproducible monthly screen</span></div><ul>
+<li>Scope: listed ordinary/common operating-company equities on ASX, US exchanges and NSE. Record the exact exchanges and universe actually accessed. US first pass reviewed NYSE/Nasdaq; NYSE American names were separately noted, not rejected as a Schloss rule.</li>
+<li>Discovery: P/book &lt;1, positive equity, low debt, established operating history. Prefer 20-year businesses; investigate at least 10 years where available. Do not silently exclude newer businesses without documenting the choice.</li>
+<li>Baseline asset screen: price/tangible common book &lt;=0.80. Strict asset tier &lt;=0.67. These are implementation thresholds. Tangible common equity = equity attributable to ordinary owners minus goodwill and other intangibles; deduct preferred interests where applicable.</li>
+<li>Leverage: financial debt/common equity &lt;1, preferably &lt;=0.5 or genuine net cash. Show leases separately and alongside debt; review liquidity and covenants. Do not label investment securities as cash or count blocked facilities as liquidity.</li>
+<li>Net-net: NCAV = current assets minus ALL liabilities and any senior claims not already deducted. Candidate when market capitalization &lt;=2/3 NCAV. Avoid the common shortcut subtracting only borrowings.</li>
+<li>Denominator: market cap uses latest shares including all economic common classes. Per-share valuation uses a conservative current fully diluted count. Reconcile weighted-average EPS shares against issued shares, rights issues, options and post-report corporate actions. Do not combine pre-issue equity with post-issue shares.</li>
+<li>Price: latest completed regular exchange session, exchange/date/time/currency/source. Mark an undated quote undated. Never certify a current pass with weeks-old quotes. Recheck immediately before any investment decision.</li>
+<li>Quality gates: inventories/receivables, deferred-tax assets, investments, ROU assets, property revaluations, restricted cash, contingent claims, pensions, closure liabilities, capex and ongoing losses. Separate audited book from a conservative realizable-value stress test.</li>
+<li>Governance: control, related-party transactions, dilution, dividends/buybacks and whether assets can ever benefit minority owners. No unsupported takeover/catalyst claims.</li>
+<li>Price history: verify 2-3-year and ideally 10-year lows/highs; 52-week proximity is a secondary signal, not a substitute. First market reports did not fully verify multi-year histories.</li>
+<li>Verdict: numeric pass, conditional diligence candidate, watch, excluded or unverified. Buy-worthy requires price, latest financials and stressed asset protection all supported; no fixed quota of buys.</li>
+</ul><div class="file-heading"><span class="file-strong">Ranking and investment use</span></div><p class="file-p">Prioritize durable asset protection, low obligations, cash-burn resilience and governance before size of the headline discount. Do not translate a ratio into a return forecast. DEN leads the conditional list; HURC is a cleaner operating-business baseline but weakens under modest inventory stress. CATO looks statistically much cheaper but store leases impair liquidation backing. GSFC and Maithan need current liability/investment work. ASX follow-up prices lack session timestamps and some evidence is secondary, so numeric passes remain unverified as current buy recommendations.</p><p class="file-p">No unconditional buy is certified in this first run. That is different from claiming there are no buys in these markets. Discovery was partial, not a census. AUD, USD and INR ratios are compared locally, not converted into one portfolio. FX, tax, brokerage access, spreads, liquidity and personal suitability are outside this research-only screen.</p><div class="file-heading"><span class="file-strong">Monthly output</span></div><p class="file-p">Each run should refresh the universe, quotes, filings, shares, obligations and corporate actions; publish additions/removals and why; keep last month's snapshot; show valuation changes separately from book erosion; and maintain missing-data/coverage counts. Carry forward names only after rechecking. A no-buy month is valid. The schedule is the 1st of each month at 9am Melbourne, with a new HTML report. It is not a promise that every exchange has a new close at that instant.</p></div></section></section><section id="screen"><section aria-labelledby=":Rm:" class="file-group"><h2 class="file-group-heading" id=":Rm:">Rebuilt screen and named results</h2><aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Every displayed row is included, but not every hit was diligenced</span><span>The source packet supplies 15 US, 15 ASX and 20 NSE leading rows, plus cross-check names. It does not supply the full 150 / 78 / 122 strict-hit roster. Unless a name has a separate filing discussion below, its status is unverified discovery only. Screen NET-NET flags are vendor calculations, not verified net-nets. PSEC is a BDC and OMH has commodity/mining exposure despite the original shortlist labels.</span></aside><div class="document"><div class="file-heading"><span class="file-strong">Schloss screen rebuild on free full-universe screeners</span></div><p class="file-p">Run date: Tuesday 13 October 2026, ~9:20pm AEDT. Research only - not personal financial advice. All figures are screener/vendor data, fiscal-quarter fundamentals, undated quotes; verify against primary filings before any decision.</p><div class="file-heading"><span class="file-strong">Discovery method</span></div><ul>
+<li><strong>TradingView screener (US + ASX)</strong> - full-universe, no paywall hit. Used the scanner endpoint the screener page itself uses  with vendor filters: filter on type=common/ADR stock, 0 &lt; P/B(fq) &lt;= 0.8, 0 &lt;= D/E(fq) &lt;= 1, then computed tangible book (equity - goodwill - intangibles), P/TBV, NCAV and net-net (mcap &lt;= 2/3 x (current assets - all liabilities)) per name. </li>
+<li><strong>Screener.in (NSE)</strong> - custom query screen over the full Indian universe. Query: <code>Market Capitalization &gt; 250 AND Price to book value &gt; 0.01 AND Price to book value &lt; 0.8 AND Debt to equity &lt; 1 AND Book value &gt; 0</code>. </li>
+</ul><div class="file-heading"><span class="file-strong">Coverage counts</span></div><div class="record-grid"><article class="record"><h3>US</h3><dl><div><dt>Tool</dt><dd>TradingView</dd></div><div><dt>Base pass (P/B&lt;=0.8, D/E&lt;=1)</dt><dd>1089 (all listed common, incl. OTC)</dd></div><div><dt>Size/exchange gate</dt><dd>NYSE/NASDAQ/AMEX, mcap &gt;= $30m -&gt; 270</dd></div><div><dt>Qualified (tangible book &gt; 0, data sane)</dt><dd>238</dd></div><div><dt>Strict P/TBV&lt;=0.67</dt><dd>150</dd></div><div><dt>Net-net</dt><dd>23</dd></div></dl></article><article class="record"><h3>ASX</h3><dl><div><dt>Tool</dt><dd>TradingView</dd></div><div><dt>Base pass (P/B&lt;=0.8, D/E&lt;=1)</dt><dd>312</dd></div><div><dt>Size/exchange gate</dt><dd>ASX only, mcap &gt;= A$30m -&gt; 133</dd></div><div><dt>Qualified (tangible book &gt; 0, data sane)</dt><dd>119</dd></div><div><dt>Strict P/TBV&lt;=0.67</dt><dd>78</dd></div><div><dt>Net-net</dt><dd>2</dd></div></dl></article><article class="record"><h3>NSE</h3><dl><div><dt>Tool</dt><dd>Screener.in</dd></div><div><dt>Base pass (P/B&lt;=0.8, D/E&lt;=1)</dt><dd>158 (mcap &gt; Rs.250 cr built in)</dd></div><div><dt>Size/exchange gate</dt><dd>-</dd></div><div><dt>Qualified (tangible book &gt; 0, data sane)</dt><dd>158</dd></div><div><dt>Strict P/TBV&lt;=0.67</dt><dd>122 (by P/B; TBV split n/a)</dd></div><div><dt>Net-net</dt><dd>n/a (see limits)</dd></div></dl></article></div><p class="file-p">Sector mix worth knowing: US qualified list holds 58 finance names and 11 miners; ASX holds 34 finance and 40 miners/energy. These get separate asset analysis per the framework, not plain P/TBV verdicts.</p><div class="file-heading"><span class="file-strong">US shortlist (ex-finance, ex-miners, by P/TBV)</span></div><div class="record-grid"><article class="record"><h3>NASDAQ:HOLO</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>MicroCloud Hologram Inc.</dd></div><div><dt>Last</dt><dd>1.42 USD</dd></div><div><dt>Mcap $m</dt><dd>32.5</dd></div><div><dt>P/TBV</dt><dd>0.09</dd></div><div><dt>D/E</dt><dd>0.02</dd></div><div><dt>Screen flag</dt><dd>NET-NET</dd></div></dl></article><article class="record"><h3>NASDAQ:AIFC</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>AI Financial Corporation</dd></div><div><dt>Last</dt><dd>0.4233 USD</dd></div><div><dt>Mcap $m</dt><dd>59.2</dd></div><div><dt>P/TBV</dt><dd>0.09</dd></div><div><dt>D/E</dt><dd>0.04</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:MLGO</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>MicroAlgo, Inc.</dd></div><div><dt>Last</dt><dd>2.88 USD</dd></div><div><dt>Mcap $m</dt><dd>35.8</dd></div><div><dt>P/TBV</dt><dd>0.12</dd></div><div><dt>D/E</dt><dd>0.02</dd></div><div><dt>Screen flag</dt><dd>NET-NET</dd></div></dl></article><article class="record"><h3>NASDAQ:PSEC</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Prospect Capital Corporation</dd></div><div><dt>Last</dt><dd>1.73 USD</dd></div><div><dt>Mcap $m</dt><dd>923.5</dd></div><div><dt>P/TBV</dt><dd>0.20</dd></div><div><dt>D/E</dt><dd>0.41</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:WATR</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Air Water Ventures Limited</dd></div><div><dt>Last</dt><dd>1.9 USD</dd></div><div><dt>Mcap $m</dt><dd>60.1</dd></div><div><dt>P/TBV</dt><dd>0.24</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NYSE:DLNG</h3><p class="coverage-tag">Reviewed: conditional, see filing update below</p><dl><div><dt>Name</dt><dd>Dynagas LNG Partners LP</dd></div><div><dt>Last</dt><dd>3.57 USD</dd></div><div><dt>Mcap $m</dt><dd>129.9</dd></div><div><dt>P/TBV</dt><dd>0.26</dd></div><div><dt>D/E</dt><dd>0.51</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:BOOM</h3><p class="coverage-tag">Reviewed: excluded after filing recalculation</p><dl><div><dt>Name</dt><dd>DMC Global Inc.</dd></div><div><dt>Last</dt><dd>5.6 USD</dd></div><div><dt>Mcap $m</dt><dd>115</dd></div><div><dt>P/TBV</dt><dd>0.27</dd></div><div><dt>D/E</dt><dd>0.44</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:CAAS</h3><p class="coverage-tag">Reviewed: conditional, see filing update below</p><dl><div><dt>Name</dt><dd>China Automotive Systems, Inc.</dd></div><div><dt>Last</dt><dd>4.63 USD</dd></div><div><dt>Mcap $m</dt><dd>139.7</dd></div><div><dt>P/TBV</dt><dd>0.28</dd></div><div><dt>D/E</dt><dd>0.17</dd></div><div><dt>Screen flag</dt><dd>NET-NET</dd></div></dl></article><article class="record"><h3>NYSE:CATO</h3><p class="coverage-tag">Reviewed: conditional, see filing update below</p><dl><div><dt>Name</dt><dd>Cato Corporation (The)</dd></div><div><dt>Last</dt><dd>2.39 USD</dd></div><div><dt>Mcap $m</dt><dd>47.6</dd></div><div><dt>P/TBV</dt><dd>0.28</dd></div><div><dt>D/E</dt><dd>0.83</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:GDHG</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Golden Heaven Group Holdings Ltd.</dd></div><div><dt>Last</dt><dd>1.12 USD</dd></div><div><dt>Mcap $m</dt><dd>66.6</dd></div><div><dt>P/TBV</dt><dd>0.31</dd></div><div><dt>D/E</dt><dd>0.01</dd></div><div><dt>Screen flag</dt><dd>NET-NET</dd></div></dl></article><article class="record"><h3>NASDAQ:LNZA</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>LanzaTech Global, Inc.</dd></div><div><dt>Last</dt><dd>6.1 USD</dd></div><div><dt>Mcap $m</dt><dd>79.8</dd></div><div><dt>P/TBV</dt><dd>0.31</dd></div><div><dt>D/E</dt><dd>0.11</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:SFWL</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Shengfeng Development Limited</dd></div><div><dt>Last</dt><dd>8.45 USD</dd></div><div><dt>Mcap $m</dt><dd>46.5</dd></div><div><dt>P/TBV</dt><dd>0.31</dd></div><div><dt>D/E</dt><dd>0.70</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NYSE:CLVT</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Clarivate Plc</dd></div><div><dt>Last</dt><dd>1.61 USD</dd></div><div><dt>Mcap $m</dt><dd>1029.9</dd></div><div><dt>P/TBV</dt><dd>0.32</dd></div><div><dt>D/E</dt><dd>0.94</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:MYPS</h3><p class="coverage-tag">Reviewed: conditional, see filing update below</p><dl><div><dt>Name</dt><dd>PLAYSTUDIOS, Inc.</dd></div><div><dt>Last</dt><dd>4.23 USD</dd></div><div><dt>Mcap $m</dt><dd>50.8</dd></div><div><dt>P/TBV</dt><dd>0.33</dd></div><div><dt>D/E</dt><dd>0.03</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>NASDAQ:SLMT</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Brera Holdings PLC</dd></div><div><dt>Last</dt><dd>3.17 USD</dd></div><div><dt>Mcap $m</dt><dd>34.9</dd></div><div><dt>P/TBV</dt><dd>0.33</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article></div><p class="file-p">Notes: HOLO/MLGO/AIFC are tiny Chinese ADRs - expect data-quality and governance risk; CATO (0.28) matches the prior run's lease-impaired deep-discount case; HURC cross-check: this pipeline computes P/TBV 0.72 vs prior manual 0.756 - consistent. US net-nets (23) include CAAS, DSWL, LGIH (mcap $1.0b, D/E 0.74), PHUN, INVE.</p><div class="file-heading"><span class="file-strong">ASX shortlist (ex-finance, ex-miners, by P/TBV)</span></div><div class="record-grid"><article class="record"><h3>ASX:OMH</h3><p class="coverage-tag">Reviewed: specialist commodity watch</p><dl><div><dt>Name</dt><dd>OM Holdings Ltd.</dd></div><div><dt>Last</dt><dd>0.2 AUD</dd></div><div><dt>Mcap A$m</dt><dd>152.9</dd></div><div><dt>P/TBV</dt><dd>0.23</dd></div><div><dt>D/E</dt><dd>0.41</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:MCA</h3><p class="coverage-tag">Reviewed: watch, cash burn and fish inventory</p><dl><div><dt>Name</dt><dd>Murray Cod Australia Limited</dd></div><div><dt>Last</dt><dd>0.14 AUD</dd></div><div><dt>Mcap A$m</dt><dd>34.7</dd></div><div><dt>P/TBV</dt><dd>0.28</dd></div><div><dt>D/E</dt><dd>0.29</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:DBF</h3><p class="coverage-tag">Reviewed: excluded, financing pressure</p><dl><div><dt>Name</dt><dd>Duxton Farms Limited</dd></div><div><dt>Last</dt><dd>0.34 AUD</dd></div><div><dt>Mcap A$m</dt><dd>37</dd></div><div><dt>P/TBV</dt><dd>0.33</dd></div><div><dt>D/E</dt><dd>0.96</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:A1N</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>ARN Media Limited</dd></div><div><dt>Last</dt><dd>0.28 AUD</dd></div><div><dt>Mcap A$m</dt><dd>90.5</dd></div><div><dt>P/TBV</dt><dd>0.37</dd></div><div><dt>D/E</dt><dd>0.62</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:DGL</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>DGL Group Limited</dd></div><div><dt>Last</dt><dd>0.255 AUD</dd></div><div><dt>Mcap A$m</dt><dd>72.7</dd></div><div><dt>P/TBV</dt><dd>0.39</dd></div><div><dt>D/E</dt><dd>0.62</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:OCA</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Oceania Healthcare Ltd.</dd></div><div><dt>Last</dt><dd>0.535 AUD</dd></div><div><dt>Mcap A$m</dt><dd>383.8</dd></div><div><dt>P/TBV</dt><dd>0.39</dd></div><div><dt>D/E</dt><dd>0.45</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:LLC</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Lendlease Group</dd></div><div><dt>Last</dt><dd>2.42 AUD</dd></div><div><dt>Mcap A$m</dt><dd>1699.8</dd></div><div><dt>P/TBV</dt><dd>0.40</dd></div><div><dt>D/E</dt><dd>0.97</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:SM1</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Synlait Milk Ltd.</dd></div><div><dt>Last</dt><dd>0.36 AUD</dd></div><div><dt>Mcap A$m</dt><dd>218</dd></div><div><dt>P/TBV</dt><dd>0.40</dd></div><div><dt>D/E</dt><dd>0.39</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:SHJ</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Shine Justice Ltd.</dd></div><div><dt>Last</dt><dd>0.63 AUD</dd></div><div><dt>Mcap A$m</dt><dd>112.6</dd></div><div><dt>P/TBV</dt><dd>0.43</dd></div><div><dt>D/E</dt><dd>0.38</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:ZGL</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Zicom Group Limited</dd></div><div><dt>Last</dt><dd>0.15 AUD</dd></div><div><dt>Mcap A$m</dt><dd>32.3</dd></div><div><dt>P/TBV</dt><dd>0.44</dd></div><div><dt>D/E</dt><dd>0.24</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:RYM</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Ryman Healthcare Ltd.</dd></div><div><dt>Last</dt><dd>1.44 AUD</dd></div><div><dt>Mcap A$m</dt><dd>1491.1</dd></div><div><dt>P/TBV</dt><dd>0.44</dd></div><div><dt>D/E</dt><dd>0.39</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:NVX</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>NOVONIX Ltd</dd></div><div><dt>Last</dt><dd>0.087 AUD</dd></div><div><dt>Mcap A$m</dt><dd>89.8</dd></div><div><dt>P/TBV</dt><dd>0.44</dd></div><div><dt>D/E</dt><dd>0.63</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:AAC</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Australian Agricultural Company Li</dd></div><div><dt>Last</dt><dd>1.31 AUD</dd></div><div><dt>Mcap A$m</dt><dd>786.3</dd></div><div><dt>P/TBV</dt><dd>0.44</dd></div><div><dt>D/E</dt><dd>0.29</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:VMT</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Vmoto Limited</dd></div><div><dt>Last</dt><dd>0.07 AUD</dd></div><div><dt>Mcap A$m</dt><dd>30.2</dd></div><div><dt>P/TBV</dt><dd>0.45</dd></div><div><dt>D/E</dt><dd>0.37</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article><article class="record"><h3>ASX:SNZ</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>Name</dt><dd>Summerset Group Holdings Limited</dd></div><div><dt>Last</dt><dd>5.6 AUD</dd></div><div><dt>Mcap A$m</dt><dd>1335.4</dd></div><div><dt>P/TBV</dt><dd>0.46</dd></div><div><dt>D/E</dt><dd>0.59</dd></div><div><dt>Screen flag</dt><dd>Not flagged</dd></div></dl></article></div><p class="file-p">Prior-run cross-checks: IRI P/TBV 0.51 at A$0.275 (matches the ASX-feed price the earlier worker verified), CAA P/TBV 0.78 (borderline, ex-DTA it failed before), GRR net-net on the numbers (mcap A$127m vs NCAV A$332m) but stays a specialist mining watch, not a plain net-net buy.</p><div class="file-heading"><span class="file-strong">NSE shortlist (Screener.in, operating companies, by P/B)</span></div><div class="record-grid"><article class="record"><h3>Rajesh Exports</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.09</dd></div><div><dt>D/E</dt><dd>0.06</dd></div><div><dt>Mcap Rs.cr</dt><dd>1588</dd></div></dl></article><article class="record"><h3>Reliance Infra.</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.13</dd></div><div><dt>D/E</dt><dd>0.28</dd></div><div><dt>Mcap Rs.cr</dt><dd>2326</dd></div></dl></article><article class="record"><h3>Veritas (India)</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.13</dd></div><div><dt>D/E</dt><dd>0.15</dd></div><div><dt>Mcap Rs.cr</dt><dd>368</dd></div></dl></article><article class="record"><h3>Brightcom Group</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.17</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>1826</dd></div></dl></article><article class="record"><h3>Hexa Tradex</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.19</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>856</dd></div></dl></article><article class="record"><h3>Oswal Green Tech</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.20</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>489</dd></div></dl></article><article class="record"><h3>Hinduja Global</h3><p class="coverage-tag">Partial check only: unresolved evidence</p><dl><div><dt>P/B</dt><dd>0.20</dd></div><div><dt>D/E</dt><dd>0.24</dd></div><div><dt>Mcap Rs.cr</dt><dd>1679</dd></div></dl></article><article class="record"><h3>Orient Paper</h3><p class="coverage-tag">Partial check only: unresolved evidence</p><dl><div><dt>P/B</dt><dd>0.22</dd></div><div><dt>D/E</dt><dd>0.20</dd></div><div><dt>Mcap Rs.cr</dt><dd>340</dd></div></dl></article><article class="record"><h3>GFL</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.23</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>634</dd></div></dl></article><article class="record"><h3>Zuari Industries</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.23</dd></div><div><dt>D/E</dt><dd>0.75</dd></div><div><dt>Mcap Rs.cr</dt><dd>820</dd></div></dl></article><article class="record"><h3>Coffee Day Enter</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.24</dd></div><div><dt>D/E</dt><dd>0.30</dd></div><div><dt>Mcap Rs.cr</dt><dd>664</dd></div></dl></article><article class="record"><h3>Uniphos Enter.</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.25</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>598</dd></div></dl></article><article class="record"><h3>Mishtann Foods</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.25</dd></div><div><dt>D/E</dt><dd>0.05</dd></div><div><dt>Mcap Rs.cr</dt><dd>332</dd></div></dl></article><article class="record"><h3>Rajapalayam Mill</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.29</dd></div><div><dt>D/E</dt><dd>0.47</dd></div><div><dt>Mcap Rs.cr</dt><dd>679</dd></div></dl></article><article class="record"><h3>Dhunseri Vent.</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.30</dd></div><div><dt>D/E</dt><dd>0.29</dd></div><div><dt>Mcap Rs.cr</dt><dd>977</dd></div></dl></article><article class="record"><h3>Kothari Products</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.31</dd></div><div><dt>D/E</dt><dd>0.09</dd></div><div><dt>Mcap Rs.cr</dt><dd>369</dd></div></dl></article><article class="record"><h3>Vardhman Hold.</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.31</dd></div><div><dt>D/E</dt><dd>0.00</dd></div><div><dt>Mcap Rs.cr</dt><dd>1161</dd></div></dl></article><article class="record"><h3>Den Networks</h3><p class="coverage-tag">Reviewed: conditional on March balance sheet</p><dl><div><dt>P/B</dt><dd>0.32</dd></div><div><dt>D/E</dt><dd>0.01</dd></div><div><dt>Mcap Rs.cr</dt><dd>1289</dd></div></dl></article><article class="record"><h3>Jain Irrigation</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.32</dd></div><div><dt>D/E</dt><dd>0.74</dd></div><div><dt>Mcap Rs.cr</dt><dd>1922</dd></div></dl></article><article class="record"><h3>Riddhi Siddhi Gl</h3><p class="coverage-tag">Unverified discovery row: no full diligence in this packet</p><dl><div><dt>P/B</dt><dd>0.33</dd></div><div><dt>D/E</dt><dd>0.19</dd></div><div><dt>Mcap Rs.cr</dt><dd>516</dd></div></dl></article></div><p class="file-p">All three prior NSE candidates reproduce: DEN Networks P/B 0.32, GSFC 0.48 (prior audited-book estimate 0.482), Maithan Alloys 0.63 (prior 0.626). 21 of 158 hits are investment/holding/finance names by name-tagging (Nalwa Sons, Kalyani Invest, BF Investment, Elcid, JSW Holdings, Pilani, VLS Finance, General Insurance, PTC India Fin etc.) - separate analysis per the framework. The name-based tag misses some holdcos (e.g. Hexa Tradex, Uniphos, Dhunseri Ventures, Vardhman Holdings look like holdcos but pass the regex) - free tier has no industry column in results, so confirm sector on the company page during diligence.</p><div class="file-heading"><span class="file-strong">What the free tiers could not do</span></div><ul>
+<li><strong>Screener.in free</strong>: no CSV export (premium, Rs.4,999/yr - confirmed by hitting the premium gate on Download Results); no industry column in screen results; custom-ratio formula builder rejects balance-sheet liability terms ('Total liabilities', 'Borrowings', 'Other liabilities' all rejected - only 'Current assets' and 'Debt' accepted), so a true NCAV/net-net ratio cannot be built; P/B is book (not tangible book) - goodwill/intangibles stripping happens in diligence; no quote timestamps.</li>
+<li><strong>TradingView free</strong>: scanner fundamentals are fiscal-quarter vendor data without date stamps; India coverage is materially incomplete (P/B, D/E, balance-sheet fields are null for GSFC, Maithan, DEN and most NSE names - that is why NSE runs on Screener.in instead); no native tangible-book ratio (computed from equity - goodwill - intangibles in the screen calculation); saved-screen and layout limits on Basic plan not yet probed; ads.</li>
+<li><strong>Both</strong>: no 10-20-year operating-history filter, no 'why is it cheap' data, no lease/deferred-tax/cash-burn adjustments. Those stay in the per-name diligence step, unchanged from the current framework.</li>
+</ul></div></section></section><section id="us"><section aria-labelledby=":Ru:" class="file-group"><h2 class="file-group-heading" id=":Ru:">US strict-tier update</h2><aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Coverage</span><span>Strict-tier review: BOOM, MYPS, CATO, DLNG and CAAS. Other names in the rebuilt leading rows are undiligenced unless covered in the original filing notes. CAAS's 2/3-NCAV result depends on minority claims; BOOM's vendor tangible-book ratio is wrong.</span></aside><div class="document"><p class="file-p">US strict-tier diligence (13 Oct 2026, research only; closes Oct 12 from stockanalysis.com; balance sheets from SEC filings)</p><p class="file-p">BOOM: FAILS. Screener P/TBV 0.27 wrong; filing TBV $4.43/sh vs $5.59 -&gt; ~1.26; $187m redeemable NCI senior claim; H1 OCF -$10.3m.</p><p class="file-p">MYPS (PLAYSTUDIOS): conditional. Post 1:10 reverse split $4.26; TBV ~$7.09/sh -&gt; P/TBV ~0.60; cash $102.7m ~2x mcap (~$52m); NCAV $66.9m, mcap 0.77x so not net-net; H1 rev -7%, op loss -$22.9m, OCF +$9.4m; shrinking, sub-$1 compliance issue. <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/1823878/000182387826000052/myps-20260630.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/1823878/000182387826000052/myps-20260630.htm</a></p><p class="file-p">CATO: conditional. $2.39, mcap ~$47.6m, equity $167.9m, TBV floor $95.2m (&lt;=0.50), cash+investments $93.8m, no borrowings; lease liabilities $138.6m, NCAV -$47.1m; Q2 NI $1.1m vs $6.8m. <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/18255/000156276226000100/cato26qtr2q.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/18255/000156276226000100/cato26qtr2q.htm</a></p><p class="file-p">DLNG: conditional, foreign filer. $3.57, mcap ~$130m, common equity ~$424.6m (~0.31 P/TBV), debt $256.6m, 6 LNG carriers avg age ~16y, backlog drops after 2028, sponsor 42.9%. <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/1578453/000110465926106698/dlng-20260630xex99d1.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/1578453/000110465926106698/dlng-20260630xex99d1.htm</a></p><p class="file-p">CAAS: conditional, China-based. $4.42 (Oct 9), mcap ~$133m, TBV ~$14.2/sh (~0.31); NCAV test marginal (0.59x, fails 2/3 if NCI deducted); H1 sales +20%, other current assets jumped $57.7m-&gt;$148.9m, $57.2m cash pledged. <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/2037400/000110465926095253/tm2622966d1_ex99-1.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/2037400/000110465926095253/tm2622966d1_ex99-1.htm</a></p><p class="file-p">Not diligenced: HOLO, MLGO, AIFC, GDHG, SLMT, SFWL (micro-cap China ADRs), PSEC (BDC), CLVT, WATR, LNZA. Screener TBV/price fields wrong or stale for 3 of 5 names. Insider ownership and 10-yr history not verified.</p></div></section></section><section id="us-base"><section aria-labelledby=":R16:" class="file-group"><h2 class="file-group-heading" id=":R16:">US original filing work</h2><details><summary>Open us original filing work</summary><div class="document"><div class="file-heading"><span class="file-strong">US Schloss screen, 13 October 2026</span></div><p class="file-p">Research, not personalized advice. Prices in USD; October 12 completed US session wherever verified. Discovery-led, not exhaustive. Eight in-scope NYSE/Nasdaq operating companies received filing review: CATO, HURC, HOFT, RELL, BSET, MOV, TITN, ACNT. GENC and LGL additionally reviewed but are NYSE American, outside strict requested exchanges. PFIN, DXYN, FSTR discovery leads only. No exhaustive exchange-wide database or coverage count established.</p><div class="file-heading"><span class="file-strong">Shortlist</span></div><p class="file-p">HURC: baseline candidate, not strict, not net-net. Close $21.24. July31 equity $192.289m minus software9.393 and other intangible.346 = TCE182.550. Q3 diluted6.497m =&gt; TBV28.10, P/TBV.756. Strict price18.83, baseline22.48. Cash52.087m, no financial debt, leases9.840m. NCAV222.704-67.731=154.973m, two-thirds/share15.90. Nine-month loss3.526m but OCF5.327m less capex.580 and capitalized software1.792=2.955m. Inventory136.616m; a 10% haircut lifts P/TBV to~.817. Equity award overhang482,113 unvested shares/units, some already issued, not all incremental; avoid blindly adding to current shares. Shares6.476322m at Aug31 versus6.402396m Oct31 prior year, ~1.15% increase. Operating since1968. Q3 profit2.314m and orders+25%; tariff-refund benefits and machine-tool cycle make earnings recovery uncertain. Not a clear strict buy.</p><p class="file-p">CATO: deep-discount candidate requiring lease/asset-quality work, not net-net. Close2.39, total ClassA+B19.911949m, estimated marketcap47.590m. Equity167.905m, no separately reported goodwill/intangible line. Gross P/equity.283; do not call exact tangible ratio verified because PPE contains software. Conservative bound subtracting ALL PPE51.730 and ALL other assets20.942 gives TCE floor95.233m, ratio&lt;=.500. This keeps lease ROU assets142.303m, however, which are not cash/liquidation proceeds. Removing ROU assets would erase much of the protection; do not equate discount to liquidation margin of safety. Cash35.115+short-term investments58.650=93.765m, restricted2.675 excluded. No ABL borrowings, $3m outstanding letter of credit. Lease obligations138.629m, .826 of equity. ALL liabilities255.533m; NCAV208.463-255.533=-47.070m. Firsthalf OCF22.537m less capex2.410=20.127m, but FY2025 loss5.909m and FY2024 loss18.057m. Q2 sales-6%, comps-3.7%, margin32.8% vs36.2%, net income1.149 vs6.832m. Stores1057 vs1101 prior year. ClassA shares18.148m vs17.977m Jan31; total common shares~.87% increase. Founded1946. Not an unconditional verified buy.</p><div class="file-heading"><span class="file-strong">Exclusions/watch</span></div><p class="file-p">HOFT: close12.56, August2 TCE168.587-.575-11.905=156.107m, diluted10.774m -&gt; TBV14.489, P/TBV.867, baseline entry&lt;=11.59, strict&lt;=9.71. NCAV94.078-55.855=38.223m, netnet&lt;=2.37/share. No termloan, leases23.954m, cash18.660m. Firsthalf cash improvement aided tariff refunds/receivable collections; weak housing/demand. WATCH, fails .8.
+BSET: close21.42, Aug29 TCE164.928-7.664-6.867=150.397m; latest outstanding8.651361m -&gt; P/TBV1.232. NCAVnegative11.943m. Reject price.
+RELL: close20.74, Aug29 TCE169.225-.270=168.955m; latest common+B14.876743m -&gt; P/TBV1.826. NCAV137.106m; netnet price6.14. Common shares increased by~253k in quarter; reject price.
+TITN: close23.54. July31 TCE557.820-67.161-51.322=439.337m. Floorplan debt623.567m plus current/longterm debt173.376m exceeds equity (1.43x), before finance leases. Halfyear operating cash negative25.063m; reject leverage even if discounted book.
+MOV: July31 TCE505.616 common equity minus3.146 intangible=502.470m, diluted23.085m -&gt; TBV21.766, baseline17.41. Last verified quote31.57 Oct9 is stale relative to Oct12; no current pass certified. Debtfree cash211.612m but leases68.109m. WATCH/current quote missing, historical observed quote above threshold.
+ACNT: June30 TCE79.596-4.735-10.008=64.853m, shares9.009453m -&gt;TBV7.198, baseline5.76. Latest completed session quote not verified; historical Sep30 14.30 far above threshold, not a current pass. WATCH/current quote missing.
+GENC: outside strict NYSE/Nasdaq (NYSE American); additionally close17.95 versus book15.335 =&gt;~1.17x, reject price. LGL: NYSE American; July rights issue issued6.062714m shares/gross41.8m after June balance sheet, making June share/book screen stale. Do not mix old equity with new shares or vice versa. Exclude.</p><p class="file-p">No verified strict &lt;=.67 or net-net buy among fully checked in-scope names. HURC meets baseline .8 screen but loses it under a modest inventory haircut. CATO passes even a severe non-lease asset deduction, but lease-adjusted liquidation protection is weak. These are research candidates, not a declaration to buy.</p><p class="file-p">HURC credit caveat: $20m secured revolver cannot currently be drawn because trailing EBITDA is negative and its leverage covenant effectively prohibits borrowing until positive trailing-four-quarter EBITDA. Do not treat this undrawn line as available liquidity. Source: full 10-Q mirror <a class="file-link" href="https://www.publicnow.com/view/C085E5F1E6858C353A4A54DE77015F9226E4D8C6" rel="noopener noreferrer" target="_blank">https://www.publicnow.com/view/C085E5F1E6858C353A4A54DE77015F9226E4D8C6</a> .</p><div class="file-heading"><span class="file-strong">Sources</span></div><p class="file-p">HURC: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/315374/000110465926105453/hurc-20260731x10q.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/315374/000110465926105453/hurc-20260731x10q.htm</a> ; <a class="file-link" href="https://www.globenewswire.com/news-release/2026/09/04/3356528/7439/en/hurco-reports-profit-in-third-quarter-results-for-fiscal-year-2026.html" rel="noopener noreferrer" target="_blank">https://www.globenewswire.com/news-release/2026/09/04/3356528/7439/en/hurco-reports-profit-in-third-quarter-results-for-fiscal-year-2026.html</a> ; <a class="file-link" href="https://finance.yahoo.com/quote/HURC/history/" rel="noopener noreferrer" target="_blank">https://finance.yahoo.com/quote/HURC/history/</a> ; <a class="file-link" href="https://www.eoddata.com/stockquote/NASDAQ/HURC.htm" rel="noopener noreferrer" target="_blank">https://www.eoddata.com/stockquote/NASDAQ/HURC.htm</a> ; <a class="file-link" href="https://hurco.com/company/history" rel="noopener noreferrer" target="_blank">https://hurco.com/company/history</a>
+CATO: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/18255/000156276226000100/cato26qtr2q.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/18255/000156276226000100/cato26qtr2q.htm</a> ; <a class="file-link" href="https://companiesmarketcap.com/sgd/cato-corporation/sec-reports-10q/0001562762-26-000100/" rel="noopener noreferrer" target="_blank">https://companiesmarketcap.com/sgd/cato-corporation/sec-reports-10q/0001562762-26-000100/</a> ; <a class="file-link" href="https://www.nasdaq.com/press-release/cato-reports-2q-results-2026-08-20" rel="noopener noreferrer" target="_blank">https://www.nasdaq.com/press-release/cato-reports-2q-results-2026-08-20</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/cato/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/cato/history/</a> ; <a class="file-link" href="https://catocorp.gcs-web.com/news-releases/news-release-details/cato-reports-4q-and-full-year-loss-2" rel="noopener noreferrer" target="_blank">https://catocorp.gcs-web.com/news-releases/news-release-details/cato-reports-4q-and-full-year-loss-2</a> ; <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/18255/000156276226000041/R27.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/18255/000156276226000041/R27.htm</a> ; <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/18255/000156276226000041/R28.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/18255/000156276226000041/R28.htm</a> ; <a class="file-link" href="https://www.catofashions.com/info/about-us" rel="noopener noreferrer" target="_blank">https://www.catofashions.com/info/about-us</a>
+HOFT: <a class="file-link" href="https://last10k.com/sec-filings/hoft/0001185185-26-003941.htm" rel="noopener noreferrer" target="_blank">https://last10k.com/sec-filings/hoft/0001185185-26-003941.htm</a> (extract includes issuer release, not full notes) ; <a class="file-link" href="https://www.globenewswire.com/de/news-release/2026/09/11/3360201/8255/en/hooker-furnishings-reports-profitable-quarter-and-first-half.html" rel="noopener noreferrer" target="_blank">https://www.globenewswire.com/de/news-release/2026/09/11/3360201/8255/en/hooker-furnishings-reports-profitable-quarter-and-first-half.html</a> ; <a class="file-link" href="https://www.eoddata.com/stockquote/NASDAQ/HOFT.htm" rel="noopener noreferrer" target="_blank">https://www.eoddata.com/stockquote/NASDAQ/HOFT.htm</a>
+BSET: <a class="file-link" href="https://investors.bassettfurniture.com/node/17661/html" rel="noopener noreferrer" target="_blank">https://investors.bassettfurniture.com/node/17661/html</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/bset/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/bset/history/</a>
+RELL: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/355948/000035594826000019/rell-20260829.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/355948/000035594826000019/rell-20260829.htm</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/rell/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/rell/history/</a>
+MOV: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/72573/000119312526366101/mov-20260731.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/72573/000119312526366101/mov-20260731.htm</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/mov/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/mov/history/</a>
+TITN: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/1409171/000162828026060350/titn-20260731.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/1409171/000162828026060350/titn-20260731.htm</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/titn/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/titn/history/</a>
+ACNT: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/95953/000009595326000109/acnt-20260630.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/95953/000009595326000109/acnt-20260630.htm</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/acnt/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/acnt/history/</a>
+GENC: <a class="file-link" href="https://www.globenewswire.com/news-release/2026/08/10/3342343/0/en/gencor-releases-third-quarter-fiscal-2026-results.html" rel="noopener noreferrer" target="_blank">https://www.globenewswire.com/news-release/2026/08/10/3342343/0/en/gencor-releases-third-quarter-fiscal-2026-results.html</a> ; <a class="file-link" href="https://stockanalysis.com/stocks/genc/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/stocks/genc/history/</a> ; exchange from <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/64472/000119312525312742/d65222d10k.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/64472/000119312525312742/d65222d10k.htm</a> (search lead, not fetched)
+LGL: <a class="file-link" href="https://www.sec.gov/Archives/edgar/data/61004/000143774926028064/lglg20260630_10q.htm" rel="noopener noreferrer" target="_blank">https://www.sec.gov/Archives/edgar/data/61004/000143774926028064/lglg20260630_10q.htm</a> ; <a class="file-link" href="https://www.publicnow.com/view/DB559CB612D9E56C2A74979F4F8E3ED04C7F747F" rel="noopener noreferrer" target="_blank">https://www.publicnow.com/view/DB559CB612D9E56C2A74979F4F8E3ED04C7F747F</a></p></div></details></section></section><section id="nse"><section aria-labelledby=":R1e:" class="file-group"><h2 class="file-group-heading" id=":R1e:">NSE strict-tier update</h2><aside class="file-callout file-bar" data-tone="note"><span class="file-strong">Coverage</span><span>Audited review covers DEN, GSFC and Maithan. HGS and Orient Paper have only partial checks. Governance/solvency and holding-company labels in the short update are flags for investigation, not completed allegations or full diligence. Other screen rows remain unverified.</span></aside><div class="document"><p class="file-p">NSE strict-tier diligence (13 Oct 2026, research only; Screener.in vendor data + prior filing work). Only ~20 of 158 screen rows visible on free tier; not a census.</p><p class="file-p">MAITHAN ALLOYS: best asset case, conditional. Rs888, mcap Rs2,586cr, TCE Rs4,129cr (P/TB 0.63), investments Rs2,840cr exceed mcap; not net-net. FY26 OCF -Rs10cr, inventory days 428, borrowings Rs237cr, profit swings on investment marks, promoters 74.96%.</p><p class="file-p">GSFC: watch. Rs148.40, TCE Rs12,262cr (P/TB 0.48), near debt-free; FCF negative 4 of last 6 yrs, subsidy receivable Rs1,453cr, contingent claims Rs1,333cr, Sept results meeting cancelled 6 Oct.</p><p class="file-p">DEN NETWORKS: conditional net-net on March data. Rs25.34, mcap ~Rs1,209cr; sales falling Rs1,307cr -&gt; Rs976cr, OCF -Rs17cr, profit mostly other income, promoters 74.9%, no dividend; Q2 FY27 results due 13 Oct not yet seen.</p><p class="file-p">HINDUJA GLOBAL SOLUTIONS: not a clean pass; screener P/B 0.20 but goodwill/intangibles unverified, core operating margin 0.8%, quarterly loss, borrowings Rs1,968cr.</p><p class="file-p">ORIENT PAPER: unverified, data conflict, capex-heavy, not near net-net.</p><p class="file-p">Skipped (governance/solvency flags, not verified): Rajesh Exports, Reliance Infrastructure, Brightcom, Coffee Day Enterprises; holdcos (Hexa Tradex, Uniphos, Dhunseri Ventures, Vardhman Holdings, Zuari, Nalwa).</p><p class="file-p">Sources: <a class="file-link" href="https://www.screener.in/company/GSFC/consolidated/" rel="noopener noreferrer" target="_blank">https://www.screener.in/company/GSFC/consolidated/</a> ; /MAITHANALL/consolidated/ ; /DEN/consolidated/ ; /HGS/consolidated/ ; /ORIENTPPR/consolidated/</p></div></section></section><section id="nse-base"><section aria-labelledby=":R1m:" class="file-group"><h2 class="file-group-heading" id=":R1m:">NSE audited balance-sheet work</h2><details><summary>Open nse audited balance-sheet work</summary><div class="document"><div class="file-heading"><span class="file-strong">NSE Schloss-style asset screen</span></div><p class="file-p">Research snapshot: 13 October 2026. INR; financial amounts in crore rupees unless stated. Quotes below use the completed 12 October session, not the ongoing 13 October session.</p><div class="file-heading"><span class="file-strong">Answer</span></div><p class="file-p">DEN Networks is the strongest net-net research candidate. GSFC and Maithan Alloys pass a strict tangible-book screen using their audited March 2026 balance sheets. None is an unconditional verified buy: DEN has results expected today, GSFC's June liabilities rose materially and September results have been delayed, and Maithan's assets include a large investment portfolio requiring separate valuation. These are a prioritized diligence list, not personal financial advice or evidence that the whole NSE lacks other candidates.</p><div class="file-heading"><span class="file-strong">Calculations</span></div><p class="file-p">Use consolidated common equity = share capital + other equity, excluding non-controlling interests. Tangible common equity subtracts goodwill and other intangible assets. Right-of-use assets are retained; lease liabilities are included in the conservative leverage column. NCAV subtracts ALL recorded liabilities, not merely debt. Annual financial statements are dated 31 March 2026; June 2026 results reviewed separately.</p><div class="record-grid"><article class="record"><h3>DEN</h3><dl><div><dt>12 Oct quote</dt><dd>25.34</dd></div><div><dt>Conservative outstanding shares, crore</dt><dd>47.7223845</dd></div><div><dt>Market cap</dt><dd>1,209.29</dd></div><div><dt>Tangible common equity</dt><dd>3,632.18</dd></div><div><dt>TB/share</dt><dd>76.11</dd></div><div><dt>P/TB</dt><dd>0.333</dd></div><div><dt>Financial debt / common equity</dt><dd>0</dd></div><div><dt>Including leases</dt><dd>0.0053</dd></div><div><dt>NCAV</dt><dd>3,089.47</dd></div><div><dt>2/3 NCAV</dt><dd>2,059.65</dd></div><div><dt>Net-net?</dt><dd>Yes, March balance sheet</dd></div></dl></article><article class="record"><h3>GSFC</h3><dl><div><dt>12 Oct quote</dt><dd>148.40</dd></div><div><dt>Conservative outstanding shares, crore</dt><dd>39.847753</dd></div><div><dt>Market cap</dt><dd>5,913.41</dd></div><div><dt>Tangible common equity</dt><dd>12,262.21</dd></div><div><dt>TB/share</dt><dd>307.73</dd></div><div><dt>P/TB</dt><dd>0.482</dd></div><div><dt>Financial debt / common equity</dt><dd>0.0020</dd></div><div><dt>Including leases</dt><dd>0.0022</dd></div><div><dt>NCAV</dt><dd>3,982.01</dd></div><div><dt>2/3 NCAV</dt><dd>2,654.67</dd></div><div><dt>Net-net?</dt><dd>No</dd></div></dl></article><article class="record"><h3>MAITHANALL</h3><dl><div><dt>12 Oct quote</dt><dd>888.25</dd></div><div><dt>Conservative outstanding shares, crore</dt><dd>2.911155</dd></div><div><dt>Market cap</dt><dd>2,585.83</dd></div><div><dt>Tangible common equity</dt><dd>4,129.33</dd></div><div><dt>TB/share</dt><dd>1,418.45</dd></div><div><dt>P/TB</dt><dd>0.626</dd></div><div><dt>Financial debt / common equity</dt><dd>0.0568</dd></div><div><dt>Including leases</dt><dd>0.0572</dd></div><div><dt>NCAV</dt><dd>2,596.16</dd></div><div><dt>2/3 NCAV</dt><dd>1,730.77</dd></div><div><dt>Net-net?</dt><dd>No</dd></div></dl></article></div><p class="file-p">All three audited P/TB values meet &lt;=0.67. No sector multiple, growth forecast or multi-year-low claim is needed to obtain those results. These thresholds are implementation defaults, not a claim that Schloss used this exact mechanical screen.</p><div class="file-heading"><span class="file-strong">DEN Networks</span></div><p class="file-p">Annual report printed pages 126-127: equity attributable to owners Rs3,784.808cr; goodwill Rs149.583cr; other intangible assets Rs3.047cr; current assets Rs3,546.701cr; ALL liabilities Rs457.227cr. TCE = 3,784.808 - 149.583 - 3.047 = 3,632.178. NCAV = 3,546.701 - 457.227 = 3,089.474.</p><p class="file-p">Shares: 477,223,845 issued; EPS weighted average 476,765,914 excludes 457,931 employee-trust shares. Use the higher issued count conservatively for market cap; this corrects the initial quick estimate. No EPS dilution is shown in FY26 or June results.</p><p class="file-p">Cash/asset quality: cash and equivalents Rs19.96cr, other bank balances Rs3,118.714cr, current investments Rs143.866cr. Do NOT call all of this unrestricted cash: Rs177.536cr bank balances are margin/security accounts. The report says Rs2,928.315cr deposits with maturities over 12 months can be withdrawn without prior notice or penalty on principal. Equity also includes Rs121.926cr deferred-tax assets. Removing those from TCE gives P/TB about 0.344, still cheap.</p><p class="file-p">Stress test: subtract minority interests Rs41.289cr, all earmarked bank balances Rs177.536cr, all disclosed contingent liabilities Rs94.239cr and capital commitments Rs10.094cr from NCAV. 2/3 stressed NCAV remains about Rs1,844.21cr, above Rs1,209.29cr market cap. This deliberately over-conservative test is not a liquidation forecast.</p><p class="file-p">Why cheap, evidenced rather than guessed: FY26 sales Rs974.28cr vs Rs1,005.41cr; other income Rs232.227cr exceeds PBT Rs208.115cr. FY26 CFO is negative Rs16.593cr and capex Rs41.042cr. Cash is not being returned: no FY26 dividend, and Rs2,045cr raised by a 2018-19 preferential allotment remains invested pending use. Promoters hold 74.90%. June-quarter revenue Rs242.774cr; PAT Rs34.589cr vs Rs53.640cr a year earlier. The company presentation reports zero gross debt and broadly defined cash/investments Rs3,383cr as of June.</p><p class="file-p">Verdict: best net-net diligence candidate, but wait for/recheck the September results expected at the 13 October board meeting before calling the March balance sheet current. No return of cash or liquidation is assured.</p><div class="file-heading"><span class="file-strong">GSFC</span></div><p class="file-p">Annual report printed page 198: common equity 79.70 + 12,186.75 = Rs12,266.45cr; other intangible assets Rs4.24cr, no goodwill balance. Current assets Rs6,094.04cr; liabilities 850.92 + 1,261.11 = Rs2,112.03cr. Borrowings Rs25cr; leases Rs1.66cr. FY26 diluted shares 398,477,530, same as basic; no dilution effect. Established 1962.</p><p class="file-p">Asset quality: non-current investments Rs4,609.70cr include associates; government subsidy receivables Rs1,452.88cr; cash Rs191.77cr plus other bank balances Rs8.34cr. Low reported leverage is not the same as liquid asset backing. FY26 CFO Rs136.14cr vs capex Rs307.78cr, so CFO minus capex is negative Rs171.64cr. Disclosed claims include Rs1,332.50cr in the 'Other' category plus tax claims; labour claims are not ascertainable. These require investigation.</p><p class="file-p">Latest filing check: June-quarter consolidated sales Rs3,583.15cr, owners' PAT Rs158.53cr. Segment totals give assets Rs16,633.75cr and liabilities Rs3,575.36cr, up from March liabilities Rs2,112.03cr. No June detailed debt/cash/intangible balance sheet in the three-page result; do not carry March debt ratios forward as current. June OCI is substantial and investment values move with markets.</p><p class="file-p">Critical recency correction: a stale quote-page news item said results would be considered on Oct12. The company's Oct6 primary notice explicitly CANCELS the Oct12 board meeting for September half-year results, with revised date to follow. Official notice, not stale news, governs.</p><p class="file-p">Verdict: strict tangible-book candidate on audited data, watch pending fresh balance-sheet/debt verification and contingent-claim review. Not a net-net.</p><div class="file-heading"><span class="file-strong">Maithan Alloys</span></div><p class="file-p">Use the REVISED consolidated annual financial statements approved Aug4 following the Impex merger, not unrevised numbers. Printed page 172: common equity 29.11 + 4,116.85 = Rs4,145.96cr; goodwill Rs16.34cr; intangibles Rs0.29cr; current assets Rs3,331.35cr; total liabilities Rs735.19cr; borrowings Rs235.30cr and leases Rs1.90cr. Diluted shares 29,111,550, no potential shares. Incorporated 1985.</p><p class="file-p">Asset quality: current investments Rs1,653.12cr and non-current investments Rs1,187.24cr; cash Rs58.96cr and other bank balances Rs47.85cr. The investment notes include quoted/unquoted equities, mutual funds, alternative funds and portfolio managers. Do NOT classify it as net cash by adding all investments to cash. Inventories Rs1,246.54cr include assets needing commodity/land-quality review. Only Rs106.81cr cash plus bank balances is less than Rs237.20cr borrowing-plus-leases.</p><p class="file-p">FY26 CFO negative Rs9.86cr; capex Rs24.88cr. Contingent liabilities Rs40.01cr and investment commitments Rs313.13cr. FY26 owners' PAT Rs433.65cr vs Rs630.18cr. June sales Rs539.53cr vs Rs632.31cr; other income Rs417.17cr, owners' PAT Rs393.04cr. Profit is heavily exposed to investments rather than solely operating ferro-alloy earnings. June segment liabilities Rs1,057.08cr vs March Rs735.19cr; full June debt/cash breakdown is not published here. September announcements show further investments in ESDS and One97 Communications; ownership/investment portfolio must be revalued, not extrapolated.</p><p class="file-p">Verdict: strict tangible-book candidate on audited data, but separately value its investment portfolio and subsequent transactions before a buy verdict. Not a net-net and not a cash box. This is a ferro-alloy operating company rather than a pure miner, but commodity cyclicality still matters.</p><div class="file-heading"><span class="file-strong">Coverage and exclusions</span></div><p class="file-p">Discovery coverage: Downstox claims 3,205 NSE stocks with fundamentals, 697 below book, refreshed 11 Oct 2026; only its top 50 rows are publicly shown. This is an aggregator's claimed universe, not an audited NSE census. A Screener low-P/B, low-debt screen's first 25 rows were also inspected. Primary filing diligence covered the three shortlisted operating companies above. No exhaustive all-NSE rank or count of true tangible-book/net-net passes is claimed.</p><p class="file-p">Excluded from this simple operating-asset screen: financials, investment holding companies, insurers, REITs/InvITs and miners, which need separate asset-quality work. Several discovery rows are financial or holding companies (e.g. Nalwa Sons, Summit Securities, BF Investment, Kalyani Investment), so their low P/B is not an automatic pass. Tiny-cap/SME and distressed names shown by discovery remain unverified, not buys. Mere P/B&lt;1 without goodwill/intangible checks is WATCH ONLY.</p><p class="file-p">Rejected discovery shortcut: the Screener page titled 'Net net scanner Benjamin Graham' has a DIFFERENT formula: half the price compared with cash + 75% receivables + 50% inventory - debt. It subtracts debt rather than all liabilities and is not this task's net-net screen. Its claimed 3,751 matches were not used as net-net evidence.</p><div class="file-heading"><span class="file-strong">Source ledger</span></div><p class="file-p">Primary sources:
+- DEN annual FY26 report, fully downloaded and text-inspected: <a class="file-link" href="https://dennetworks.com/upload/annuallpdf/FY2026.pdf" rel="noopener noreferrer" target="_blank">https://dennetworks.com/upload/annuallpdf/FY2026.pdf</a>
+- DEN June results: <a class="file-link" href="https://dennetworks.com/upload/results/DEN_Results_June.pdf" rel="noopener noreferrer" target="_blank">https://dennetworks.com/upload/results/DEN_Results_June.pdf</a>
+- DEN June investor update: <a class="file-link" href="https://dennetworks.com/upload/results/a5fdba5c-2654-4251-b7d3-56318a46c040.pdf" rel="noopener noreferrer" target="_blank">https://dennetworks.com/upload/results/a5fdba5c-2654-4251-b7d3-56318a46c040.pdf</a>
+- DEN current investor index: <a class="file-link" href="https://dennetworks.com/Investor" rel="noopener noreferrer" target="_blank">https://dennetworks.com/Investor</a>
+- GSFC FY26 annual report, fully downloaded and text-inspected: <a class="file-link" href="https://www.gsfclimited.com/Content/writereaddata/Portal/Document/186_1_1_AR2026.pdf" rel="noopener noreferrer" target="_blank">https://www.gsfclimited.com/Content/writereaddata/Portal/Document/186_1_1_AR2026.pdf</a>
+- GSFC June results: <a class="file-link" href="https://www.gsfclimited.com/Content/writereaddata/Portal/FinanceShare/173_1_1_Results.pdf" rel="noopener noreferrer" target="_blank">https://www.gsfclimited.com/Content/writereaddata/Portal/FinanceShare/173_1_1_Results.pdf</a>
+- GSFC Oct6 cancellation notice: <a class="file-link" href="https://www.gsfclimited.com/Content/writereaddata/Portal/Notification/NotificationImage/266_1_1_Intimation_for_Cancellation_of_Board_Meeting.pdf" rel="noopener noreferrer" target="_blank">https://www.gsfclimited.com/Content/writereaddata/Portal/Notification/NotificationImage/266_1_1_Intimation_for_Cancellation_of_Board_Meeting.pdf</a>
+- Maithan FY26 revised annual report, fully downloaded and text-inspected: <a class="file-link" href="https://www.maithanalloys.com/wp-content/uploads/2026/09/MAL-Annual-Report-2025-26.pdf" rel="noopener noreferrer" target="_blank">https://www.maithanalloys.com/wp-content/uploads/2026/09/MAL-Annual-Report-2025-26.pdf</a>
+- Maithan June results: <a class="file-link" href="https://www.maithanalloys.com/wp-content/uploads/2026/08/Apr-Jun-Q1.pdf" rel="noopener noreferrer" target="_blank">https://www.maithanalloys.com/wp-content/uploads/2026/08/Apr-Jun-Q1.pdf</a>
+- Maithan subsequent announcements: <a class="file-link" href="https://www.maithanalloys.com/announcements/" rel="noopener noreferrer" target="_blank">https://www.maithanalloys.com/announcements/</a>
+Quotes, aggregator-sourced rather than official exchange-certified:
+- GSFC Rs148.40, 12 Oct 15:59 IST: <a class="file-link" href="https://choiceindia.com/stocks/gujarat-state-fertilizers-chemicals-ltd-share-price" rel="noopener noreferrer" target="_blank">https://choiceindia.com/stocks/gujarat-state-fertilizers-chemicals-ltd-share-price</a>
+- DEN Rs25.34, 12 Oct NSE close, also next results date: <a class="file-link" href="https://flashfinance.news/stocks/DEN" rel="noopener noreferrer" target="_blank">https://flashfinance.news/stocks/DEN</a>
+- Maithan Rs888.25, 12 Oct 15:59 IST close: <a class="file-link" href="https://economictimes.indiatimes.com/maithan-alloys-ltd/stocks/companyid-2299.cms" rel="noopener noreferrer" target="_blank">https://economictimes.indiatimes.com/maithan-alloys-ltd/stocks/companyid-2299.cms</a>
+Discovery and cross-checks:
+- <a class="file-link" href="https://downstox.com/screener/stocks-below-book-value" rel="noopener noreferrer" target="_blank">https://downstox.com/screener/stocks-below-book-value</a>
+- <a class="file-link" href="https://www.screener.in/screens/879995/price-to-book-less-than-07-and-debt-free/" rel="noopener noreferrer" target="_blank">https://www.screener.in/screens/879995/price-to-book-less-than-07-and-debt-free/</a>
+- <a class="file-link" href="https://www.screener.in/screens/188628/net-net-scanner-benjamin-graham/" rel="noopener noreferrer" target="_blank">https://www.screener.in/screens/188628/net-net-scanner-benjamin-graham/</a>
+- <a class="file-link" href="https://www.screener.in/company/GSFC/consolidated/" rel="noopener noreferrer" target="_blank">https://www.screener.in/company/GSFC/consolidated/</a>
+- <a class="file-link" href="https://www.screener.in/company/DEN/consolidated/" rel="noopener noreferrer" target="_blank">https://www.screener.in/company/DEN/consolidated/</a>
+- <a class="file-link" href="https://www.screener.in/company/MAITHANALL/consolidated/" rel="noopener noreferrer" target="_blank">https://www.screener.in/company/MAITHANALL/consolidated/</a></p><div class="file-heading"><span class="file-strong">Limitations</span></div><p class="file-p">No independently certified live NSE closing-feed access. No detailed June debt/cash statements for GSFC/Maithan in reviewed Q1 filings. DEN's September results not yet on its current investor index at research time; no recurring monitoring was requested or established. Full post-March corporate-action/dilution and asset-realizability audits are not complete. Prices are historical completed-session snapshots and not a promise of execution at those levels. No multi-year-low verification was completed; 52-week lows must not be relabeled multi-year lows.</p></div></details></section></section><section id="asx"><section aria-labelledby=":R1u:" class="file-group"><h2 class="file-group-heading" id=":R1u:">ASX strict-tier diligence</h2><div class="document"><div class="file-heading"><span class="file-strong">ASX strict-tier fundamentals diligence</span></div><p class="file-p">Research date: Tuesday, 13 October 2026. Research only, not a buy recommendation.</p><div class="file-heading"><span class="file-strong">Bottom line</span></div><p class="file-p">Of four names checked, <strong>Integrated Research (IRI) is the strongest candidate for further work</strong>, because it has cash, little financial leverage and positive cash generation. But shrinking renewals, a large new bad-debt provision, and a dividend that reduces asset backing stop it being a clean pass. <strong>OM Holdings (OMH) belongs in a separate commodity/smelter bucket</strong>, not the ordinary ex-miners shortlist. <strong>Murray Cod Australia (MCA) is a fish-inventory and funding story</strong>, not a cash-backed bargain. <strong>Duxton Farms (DBF) is a financing/asset-sale special situation with going-concern uncertainty</strong>. The biggest discounts did not produce the best fundamentals.</p><p class="file-p">Scope: IRI from the prior shortlist plus the three lowest reported P/TBV names in the rebuilt ASX list (OMH, MCA, DBF). This is not diligence on all 78 vendor-data strict-tier hits. Sector labels in that screen are not investment classifications.</p><div class="file-heading"><span class="file-strong">Price and accounting discipline</span></div><p class="file-p">All financial statement figures below are primary company reports, not copied screener ratios. The live ASX research header returned IRI A$0.275, OMH A$0.200, MCA A$0.140 and DBF A$0.340 when checked on 13 October. <strong>Those responses have no quote/session timestamp. I cannot certify them as the 13 October closing prices.</strong> Ratios using them are indicative only. Public historical pages were stale: IRI latest displayed 8 October at A$0.29; MCA 29 September at A$0.16; DBF 6 October at A$0.35; OMH Yahoo only through 17 July at A$0.235. Do not silently call any of these latest-session quotes.</p><p class="file-p">For comparability: tangible equity means consolidated equity attributable to ordinary owners less goodwill and all identifiable intangibles. NCAV means current assets minus <strong>all</strong> liabilities, including leases, deferred tax, provisions and deferred revenue. No liability is forgiven because it may not need immediate cash payment. ROU assets are retained in the base TBV definition, with separate sensitivity. Minority equity is removed for OMH. Revalued assets are not cash. None of the four is a verified 2/3-NCAV net-net.</p><div class="record-grid"><article class="record"><h3>1</h3><dl><div><dt>Company</dt><dd>IRI</dd></div><div><dt>Recomputed P/TBV, indicative</dt><dd>0.512 before dividend adjustment; about 0.564 after</dd></div><div><dt>NCAV</dt><dd>A$69.789m; about A$60.670m after dividend</dd></div><div><dt>Verdict</dt><dd>Conditional research candidate, not net-net</dd></div></dl></article><article class="record"><h3>2</h3><dl><div><dt>Company</dt><dd>OMH</dd></div><div><dt>Recomputed P/TBV, indicative</dt><dd>0.236</dd></div><div><dt>NCAV</dt><dd>US$54.970m, about A$78.969m</dd></div><div><dt>Verdict</dt><dd>Specialist commodity watch</dd></div></dl></article><article class="record"><h3>3</h3><dl><div><dt>Company</dt><dd>MCA</dd></div><div><dt>Recomputed P/TBV, indicative</dt><dd>0.291</dd></div><div><dt>NCAV</dt><dd>A$41.488m</dd></div><div><dt>Verdict</dt><dd>Watch, weak asset quality and cash burn</dd></div></dl></article><article class="record"><h3>4</h3><dl><div><dt>Company</dt><dd>DBF</dd></div><div><dt>Recomputed P/TBV, indicative</dt><dd>0.357</dd></div><div><dt>NCAV</dt><dd>Negative A$31.651m</dd></div><div><dt>Verdict</dt><dd>Excluded from conservative operating-company shortlist</dd></div></dl></article></div><p class="file-p">Statements are at 30 June 2026, except historical comparisons. OMH reports in USD; FX conversion uses RBA's 13 October 2026 rate, US$0.6961 per A$1. This is a conversion convention, not a forecast. All figures rounded; calculations below use full source amounts where available.</p><div class="file-heading"><span class="file-strong">1. Integrated Research: strongest balance sheet, deteriorating core business</span></div><p class="file-p"><strong>Business/history.</strong> Founded in 1988, providing Prognosis monitoring/diagnostics for business-critical computing, payments and communications across more than 40 countries. Established customers and recurring maintenance are positives. But it is not a high-retention SaaS growth business: Collaborate's FY26 constant-currency net revenue retention was only 83%, unchanged from FY25. Transact's 18% growth was helped by early multi-year renewals, so do not extrapolate it without contract-cohort work.</p><p class="file-p"><strong>Fundamentals.</strong> FY26 revenue A$57.638m, down 16% from A$68.256m. Collaborate down 27%; Infrastructure down 19%; Transact up 18%. Statutory EBITDA negative A$2.136m (about -3.7% of revenue), versus positive A$15.882m FY25. Reported NPAT A$1.210m is less reassuring than it looks: finance income and a tax benefit help bridge an operating loss. Total contract value fell A$83.869m FY24 -&gt; A$67.273m FY25 -&gt; A$54.317m FY26. Management's pro forma EBITDA A$8.666m is not substituted for the statutory result.</p><p class="file-p"><strong>Cash.</strong> Operating cash flow A$12.648m, versus A$8.679m FY25. Capex only A$0.257m, so operating cash flow less equipment capex is A$12.391m before lease principal and financing/distributions. This does not prove current sales are profitable: collections of earlier licences and changes in receivables affect conversion. Cash A$51.693m exceeds the indicative A$50.157m market cap, but it is not distributable surplus free of obligations.</p><p class="file-p"><strong>Assets.</strong> Equity A$98.021m; no capitalised intangible asset balance in the June statement. Current assets A$91.148m less all liabilities A$21.359m = NCAV A$69.789m. Two-thirds is A$46.526m, below the indicative market cap. Debt is essentially leases A$1.521m, not bank borrowings. Receivables are material: current A$35.900m plus non-current A$22.343m. The A$4.978m new expected-credit-loss charge includes a single-client A$3.8m provision. Remaining current receivables deserve scrutiny.</p><p class="file-p"><strong>Dividend/dilution.</strong> A 5c dividend was declared after balance date, record date 3 September, payable 15 October. A current buyer should not add that dividend to the ex-entitlement price or count the June cash before it leaves. Using the latest quoted share count of 182,388,666 from the 30 September Appendix 2A gives an approximate A$9.119m payout adjustment: TBV A$88.902m, NCAV A$60.670m. The exact entitlement share count could differ slightly. The share count increased by 1,796,863 on 30 September, so the earlier 180.592m balance-date count is not used for current market cap. October 13 cessation notice is listed, but no claim of complete option reconciliation is made.</p><p class="file-p"><strong>Ownership/history.</strong> Directors named in the August report own 701,263 ordinary shares in aggregate (about 0.38% of the September count); CEO Ian Lowe had no ordinary shares and 984,621 performance rights. This is not large founder alignment. A primary FY2016 report shows revenue A$84.532m and NPAT about A$16m. The much lower FY26 revenue/profit means long existence alone is not business durability. This is a ten-year endpoint comparison, not a complete annual ten-year series.</p><p class="file-p"><strong>Why cheap, downside/upside.</strong> Weak renewals, lower contract values, procurement delays and bad debt provide fundamental reasons for the discount. Software know-how is not liquidation collateral. Post-dividend NCAV under a 25% haircut to current receivables falls to about A$51.695m; a 50% haircut falls to A$42.720m, below current indicative market cap. Extra cash burn further reduces protection. Upside would require renewed contracts, collections and disciplined capital returns, not merely a rerating to June book. Before upgrading: verify fresh close, exact dividend payout, remaining receivable quality and FY27 renewal evidence.</p><p class="file-p">Sources: FY26 audited Appendix 4E/financial report [S1], share count [S2], FY2016 [S3], dated historical quotes [S4], ASX live header [S5].</p><div class="file-heading"><span class="file-strong">2. OM Holdings: deep discount, but recurring economics worse than headline profit</span></div><p class="file-p"><strong>Business/history.</strong> Long-standing manganese/ferroalloy group with mining history, trading and capital-intensive smelters, including Malaysia. Founder/executive chair Low Ngee Tong has led the business since listing in 1998. This is commodity cycle exposure, not an ordinary industrial liquidation case.</p><p class="file-p"><strong>Fundamentals.</strong> H1 2026 revenue US$265.234m, down 14.2%. Gross margin improved to 11.4% from about 7.0%, but continuing operations lost US$24.052m after tax. The headline US$26.353m profit incorporates US$50.405m profit from discontinued operations. It is not proof the continuing smelting business recovered. Operating cash outflow was US$72.4m; inventory rose to US$299.112m. Borrowings US$181.094m plus leases US$3.368m are about 41% of parent equity. Cash excluding collateral is US$38.153m; US$10.683m collateral is not freely available cash.</p><p class="file-p"><strong>Assets/NCAV.</strong> Parent equity US$452.069m (not total equity US$454.515m including minority interests). No goodwill balance is shown. Some land-use/exploration balances warrant specialist haircut, but even stripping them does not erase the headline discount. Current assets US$391.100m less ALL liabilities US$336.130m = US$54.970m NCAV. Indicative market cap A$153.251m substantially exceeds two-thirds of converted NCAV (about A$52.646m). Inventory is 76.5% of current assets. A 25% inventory haircut makes NCAV negative US$19.808m. Smelting plant resale value, financing claims and inventory realisability matter more than the 0.24 ratio.</p><p class="file-p"><strong>Ownership/history.</strong> April 2026 substantial-holder register: Low Ngee Tong 9.02%; Huang Gang 13.52%; Amplewood Resources 13.08%; Heng Siow Kwee 8.77%. Nominee holdings are not independently treated as beneficial ownership. FY2016 primary report: revenue A$414.2m, net loss A$16.7m, operating cash inflow A$22.3m. FY2021-25 parent profits in the latest annual report: US$61.5m, US$67.8m, US$18.1m, US$9.3m, US$2.3m. Currency/presentation differs across the decade; these are evidence of cyclicality, not a like-for-like growth series.</p><p class="file-p"><strong>Why cheap, downside/upside.</strong> Oversupply, subdued steel/alloy demand, thin margins and working-capital absorption explain the discount. Asset disposal has helped deleveraging, but is not repeatable earnings. Upside is continuing margin recovery and inventory-to-cash conversion. Downside is an extended commodity trough, specialised-plant impairments and further capital needs. A 15 October special meeting proposes Bermuda-to-Singapore redomiciliation and name change to OM Materials Holdings; not yet treated as approved. Keep in specialist watch, not a screen pass.</p><p class="file-p">Sources: H1 report [S6], annual 2025 [S7], annual 2016 [S8], meeting [S9], FX [S10]. The H1 balance sheet and income statement were visually checked to correct OCR.</p><div class="file-heading"><span class="file-strong">3. Murray Cod Australia: book value mainly fish, cash burn far larger than sales</span></div><p class="file-p"><strong>Business/history.</strong> Aquna-branded farmed Murray cod, hatcheries and processing. January 2017 acquisition anchors the current operating business. This does not meet a verified 10-20-year record for today's business, even though its listed corporate shell is older.</p><p class="file-p"><strong>Fundamentals.</strong> FY26 sales revenue A$13.493m, up 24%, but loss A$5.370m versus A$8.558m profit FY25. The income statement includes A$29.540m fair-value biological gains and a A$2.244m negative valuation adjustment. These dwarf cash sales. Fish cost of sales A$24.069m exceeds revenue; with fair-value inventory accounting, this is not a clean conventional gross-margin measure. Underlying unit profitability is not established from the published totals. Operating cash outflow A$26.573m versus A$16.907m FY25; capex A$2.072m. A$35.590m gross equity issuance funded the year. Do not call it self-funding.</p><p class="file-p"><strong>Assets/NCAV.</strong> Equity A$125.149m less ALL intangibles A$5.855m = TBV A$119.294m. Intangibles include A$3.614m tradable water rights, which could retain value in a specialist appraisal; this conservative calculation strips them regardless. Current assets A$91.171m less all liabilities A$49.683m = NCAV A$41.488m. Two-thirds A$27.659m is below the A$34.702m indicative market cap. Inventory A$86.143m is 94.5% of current assets, including net biological fish A$84.151m. A 25% inventory haircut leaves NCAV only A$19.953m; 50% makes it slightly negative. Disease, oxygen failure, feed costs, harvest timing, market price and unaccounted fish are real risks, not minor footnotes. June cash was A$4.145m; a July R&amp;D refund A$3.432m improves liquidity but does not cure recurring burn.</p><p class="file-p"><strong>Dilution/ownership.</strong> Shares grew from 105.775m after the prior consolidation to 247.871m by June 2026, about 134% growth in one year. Chairman Brett Paton and associates 24.463m shares, about 9.87%. FY26 KMP table totals 47.239m shares (19.1%), but includes people who left during the year, so it is not a current director-ownership percentage. Current CEO Steven Chaur bought 250,000 shares at A$0.16 on 29 September, increasing his disclosed indirect holding to 513,157. Alignment is a positive; it does not make live fish cash-equivalent.</p><p class="file-p"><strong>Why cheap, downside/upside.</strong> Growth and commercial sales-channel expansion might turn inventory into cash, but the gap between biomass values and realised sales is large. The company can look statistically cheap while every share loses backing through losses and discounted issuance. Keep on watch only until harvest/receipts, cash gross profit and cash burn improve materially.</p><p class="file-p">Sources: FY26 report [S11], current CEO ownership filing [S12], 2022 report/history [S13]. A complete annual ten-year cash-flow series is not established.</p><div class="file-heading"><span class="file-strong">4. Duxton Farms: property discount, but financing pressure dominates</span></div><p class="file-p"><strong>Business/history.</strong> Listed in 2018 as a broadacre farm owner. A 2025 merger added four private agricultural businesses spanning horticulture, viticulture and apiculture. A new post-merger portfolio cannot be treated as a seasoned ten-year operating business. Drought/flood cycles, property sales and a development pivot limit historical comparability.</p><p class="file-p"><strong>Fundamentals.</strong> FY26 revenue A$18.114m; gross loss A$4.165m (about -23%). Net loss A$40.324m; underlying EBITDA loss A$12.921m. Operating cash outflow A$30.759m, versus A$6.603m FY25. Business-combination expenses A$6.912m explain part, not all, of the loss. Cash A$1.217m against overdraft A$14.482m. No clean defensive earnings stream.</p><p class="file-p"><strong>Assets/obligations.</strong> Equity A$115.080m less intangibles A$11.690m = TBV A$103.390m. Current assets A$100.979m less all liabilities A$132.630m = NEGATIVE A$31.651m NCAV. A$74.9m of current assets is property/disposal groups held for sale, not operating working capital. Borrowings including overdraft A$103.924m; leases A$6.592m. Debt plus leases is about 96% of book equity and 107% of tangible equity. The apparent 0.36 P/TBV coexists with much higher balance-sheet risk than the simple screen suggests.</p><p class="file-p"><strong>Going concern and financing.</strong> Primary annual report explicitly describes dependence on Forbes aggregation sale, other divestments, capex cuts, debt extensions and/or fresh equity/convertible notes. On 1 October the company reported A$4.807m notes issued, plus shortfall commitments bringing the headline to A$6.566m only INCLUDING amounts requiring shareholder approval. This is not the full roughly A$9.74m originally sought. Notes offer 7.5% cash coupon or 12% capitalised return and conversion, introducing claims ahead of ordinary equity and dilution risk. Do not say all funding is secured.</p><p class="file-p"><strong>Ownership/governance.</strong> Chairman Ed Peter has substantial disclosed direct/indirect interests; the annual report's director table lists 17.427m ordinary shares (about 16% of June shares). The October filing reports note participation, not a new on-market equity purchase. Management/service fees A$1.936m and connected-party relationships need review. High insider exposure can align incentives but also creates conflicts; nominee names are not assumed to be owners.</p><p class="file-p"><strong>Why cheap, downside/upside.</strong> Development assets and land might realise book values over time. But funding distress can force discounted sales or highly dilutive capital. FY26 shares rose from 41.157m to 107.118m, largely merger consideration, so old per-share NAV is not comparable. A 20% haircut just to the A$74.9m assets held for sale removes A$14.98m from equity, before ongoing burn, financing and sale costs. Recovery requires completed disposals near carrying values, financing and a credible route to cash profit. Exclude from the conservative list; retain only as a high-risk special situation if explicitly wanted.</p><p class="file-p">Sources: FY26 annual [S14], 1 October notes result [S15], October director-interest filing [S16], independent agricultural context [S17].</p><div class="file-heading"><span class="file-strong">What would change the ranking</span></div><p class="file-p">IRI: renewed sales/retention, collections, conservative post-dividend asset coverage. OMH: continuing smelter profitability and working capital release. MCA: cash sale volumes/profit catching up with biomass, lower burn without recurrent dilution. DBF: settled sales and funding, not merely planned disposals or conditional commitments. No price-to-book discount is a promised return or a liquidation price target.</p><p class="file-p">Open gaps: certified latest-session closes for all four; full audited annual ten-year series; complete subsequent-announcement/ownership and dilution reconciliation; executable liquidation values and transaction costs. Primary reports provide substantial evidence but cannot solve those questions alone. No verified ASX buy emerges from these four.</p><div class="file-heading"><span class="file-strong">Sources</span></div><ul>
+<li><strong>S1</strong> Integrated Research FY26 audited Appendix 4E/financial report, 27 August 2026, primary company document via ASX filing mirror: <a class="file-link" href="https://weblink-asx-announcements.old-mountain-2586.workers.dev/pdf/IRI/21692646.pdf" rel="noopener noreferrer" target="_blank">https://weblink-asx-announcements.old-mountain-2586.workers.dev/pdf/IRI/21692646.pdf</a> . Identity, date and audited statement contents read; official investor index is lagged: <a class="file-link" href="https://investors.ir.com/financial-reports" rel="noopener noreferrer" target="_blank">https://investors.ir.com/financial-reports</a> . Mirror is not an official company host.</li>
+<li><strong>S2</strong> IRI September 30 Appendix 2A: <a class="file-link" href="https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03142242-2A1700673" rel="noopener noreferrer" target="_blank">https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03142242-2A1700673</a></li>
+<li><strong>S3</strong> IRI FY2016 company report: <a class="file-link" href="https://clients3.weblink.com.au/clients/integratedresearch/headline.aspx?headlineid=2967206" rel="noopener noreferrer" target="_blank">https://clients3.weblink.com.au/clients/integratedresearch/headline.aspx?headlineid=2967206</a></li>
+<li><strong>S4</strong> Stale dated quote evidence: <a class="file-link" href="https://stockanalysis.com/quote/asx/IRI/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/quote/asx/IRI/history/</a> ; <a class="file-link" href="https://stockanalysis.com/quote/asx/MCA/history/" rel="noopener noreferrer" target="_blank">https://stockanalysis.com/quote/asx/MCA/history/</a> ; <a class="file-link" href="https://www.fool.com.au/tickers/asx-dbf/" rel="noopener noreferrer" target="_blank">https://www.fool.com.au/tickers/asx-dbf/</a> ; <a class="file-link" href="https://finance.yahoo.com/quote/OMH.AX/history/" rel="noopener noreferrer" target="_blank">https://finance.yahoo.com/quote/OMH.AX/history/</a></li>
+<li><strong>S5</strong> Live undated ASX headers: <a class="file-link" href="https://asx.api.markitdigital.com/asx-research/1.0/companies/iri/header" rel="noopener noreferrer" target="_blank">https://asx.api.markitdigital.com/asx-research/1.0/companies/iri/header</a> ; <a class="file-link" href="https://asx.api.markitdigital.com/asx-research/1.0/companies/omh/header" rel="noopener noreferrer" target="_blank">https://asx.api.markitdigital.com/asx-research/1.0/companies/omh/header</a> ; <a class="file-link" href="https://asx.api.markitdigital.com/asx-research/1.0/companies/mca/header" rel="noopener noreferrer" target="_blank">https://asx.api.markitdigital.com/asx-research/1.0/companies/mca/header</a> ; <a class="file-link" href="https://asx.api.markitdigital.com/asx-research/1.0/companies/dbf/header" rel="noopener noreferrer" target="_blank">https://asx.api.markitdigital.com/asx-research/1.0/companies/dbf/header</a></li>
+<li><strong>S6</strong> OMH June 2026 interim report, reviewed financials: <a class="file-link" href="https://announcements.asx.com.au/asxpdf/20260827/pdf/073bkr2tr2ftz0.pdf" rel="noopener noreferrer" target="_blank">https://announcements.asx.com.au/asxpdf/20260827/pdf/073bkr2tr2ftz0.pdf</a></li>
+<li><strong>S7</strong> OMH FY2025 annual: <a class="file-link" href="https://www.omholdingsltd.com/wp-content/uploads/2026/04/OMH-AR2025-Low-Res.pdf" rel="noopener noreferrer" target="_blank">https://www.omholdingsltd.com/wp-content/uploads/2026/04/OMH-AR2025-Low-Res.pdf</a></li>
+<li><strong>S8</strong> OMH FY2016 annual: <a class="file-link" href="https://www.omholdingsltd.com/wp-content/uploads/2019/03/OM-Holdings-AR-Full-Set-25April2017-5pm_Final.pdf" rel="noopener noreferrer" target="_blank">https://www.omholdingsltd.com/wp-content/uploads/2019/03/OM-Holdings-AR-Full-Set-25April2017-5pm_Final.pdf</a></li>
+<li><strong>S9</strong> OMH special meeting notice: <a class="file-link" href="https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03137665-6A1344706" rel="noopener noreferrer" target="_blank">https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03137665-6A1344706</a></li>
+<li><strong>S10</strong> RBA 13 October FX: <a class="file-link" href="https://www.rba.gov.au/statistics/frequency/exchange-rates.html" rel="noopener noreferrer" target="_blank">https://www.rba.gov.au/statistics/frequency/exchange-rates.html</a></li>
+<li><strong>S11</strong> MCA FY2026 annual, filed September 24: [Credential-bearing download URL omitted; see the named primary filing.]</li>
+<li><strong>S12</strong> MCA CEO interest change filed October 6: <a class="file-link" href="https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03144978-2A1702193" rel="noopener noreferrer" target="_blank">https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03144978-2A1702193</a></li>
+<li><strong>S13</strong> MCA FY2022 annual: <a class="file-link" href="https://announcements.asx.com.au/asxpdf/20220830/pdf/45dhrf21fb4530.pdf" rel="noopener noreferrer" target="_blank">https://announcements.asx.com.au/asxpdf/20220830/pdf/45dhrf21fb4530.pdf</a></li>
+<li><strong>S14</strong> DBF FY2026 annual, signed September 29: <a class="file-link" href="https://www.duxtonfarms.com/wp-content/uploads/2026/10/DBF_Annual_Report_2026.pdf" rel="noopener noreferrer" target="_blank">https://www.duxtonfarms.com/wp-content/uploads/2026/10/DBF_Annual_Report_2026.pdf</a></li>
+<li><strong>S15</strong> DBF convertible-note offer result, October 1: <a class="file-link" href="https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03143116-2A1701062" rel="noopener noreferrer" target="_blank">https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03143116-2A1701062</a></li>
+<li><strong>S16</strong> DBF chairman interest notice, October 7: <a class="file-link" href="https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03145573-2A1702638" rel="noopener noreferrer" target="_blank">https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03145573-2A1702638</a></li>
+<li><strong>S17</strong> Independent agricultural reporting, used as context not balance-sheet authority: <a class="file-link" href="https://www.graincentral.com/news/duxton-posts-40-32m-loss-during-pivot-out-of-nsw-cropping/" rel="noopener noreferrer" target="_blank">https://www.graincentral.com/news/duxton-posts-40-32m-loss-during-pivot-out-of-nsw-cropping/</a></li>
+</ul></div></section></section><section id="asx-base"><section aria-labelledby=":R26:" class="file-group"><h2 class="file-group-heading" id=":R26:">ASX earlier research: CAA and GRR</h2><details><summary>Open asx earlier research: caa and grr</summary><div class="document"><p class="file-p">ASX follow-up (13 Oct ~8:30pm AEDT, prices from ASX research feed, undated): IRI A$0.275 (52wk low, ex-div 5c paid 15 Oct; NTA 54.3c, P/NTA 0.51, post-div ~0.56; not net-net; FY26 rev -16%, EBITDA loss A$2.1m; from FY26 presentation, 4E PDF not opened). CAA A$12.10; P/TBV 0.78 incl A$29m DTA, 0.89 excl; D/E 0.28; not net-net; P/E 5-6; buybacks (primary 4D 24 Aug). GRR A$0.11 (52wk low); P/TBV 0.22; NCAV 341.5m vs mcap 127.3m passes net-net; A$690.7m impairment, rehab provisions 152.5m, underground funding unresolved, inventory 45% of CA (primary H1 results 31 Aug). Verdict: IRI and GRR meet numeric screen, CAA borderline; none clean buy. Sources: <a class="file-link" href="https://announcements.asx.com.au/asxpdf/20260824/pdf/073327tvd6dc4g.pdf" rel="noopener noreferrer" target="_blank">https://announcements.asx.com.au/asxpdf/20260824/pdf/073327tvd6dc4g.pdf</a> ; <a class="file-link" href="https://announcements.asx.com.au/asxpdf/20260831/pdf/073jm6h8lh2t3y.pdf" rel="noopener noreferrer" target="_blank">https://announcements.asx.com.au/asxpdf/20260831/pdf/073jm6h8lh2t3y.pdf</a> ; <a class="file-link" href="https://kalkine.com.au/news/announcements/integrated-research-posts-fy26-revenue-of-576m-declares-005-fully-franked-dividend" rel="noopener noreferrer" target="_blank">https://kalkine.com.au/news/announcements/integrated-research-posts-fy26-revenue-of-576m-declares-005-fully-franked-dividend</a> ; <a class="file-link" href="https://asx.api.markitdigital.com/asx-research/1.0/companies/iri/header" rel="noopener noreferrer" target="_blank">https://asx.api.markitdigital.com/asx-research/1.0/companies/iri/header</a></p><div class="file-heading"><span class="file-strong">ASX scope and remaining gaps</span></div><p class="file-p">Around 21 non-bank names reviewed from a 76-result aggregator screen with market cap above A$15m; not all ASX. IRI FY26 presentation/secondary release reviewed but primary 4E not opened. CAA and GRR primary half-year reports reviewed. ASX research-feed prices undated, so not certified October 13 closing prices. CAA after full deferred-tax-asset deduction fails the baseline 0.8 tier. GRR is a specialist mining/rehabilitation case, not an ordinary net-net pass. Other earlier discovery ratios and exclusions are not current verdicts. No verified ASX buy.</p></div></details></section></section><section id="library"><section aria-labelledby=":R2e:" class="file-group"><h2 class="file-group-heading" id=":R2e:">The 33-source Schloss library</h2><details><summary>Open the 33-source schloss library</summary><div class="document"><p class="file-p">Library: <a class="file-link" href="https://www.bishoprockcap.com/library/walter-schloss" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/library/walter-schloss</a></p><div class="file-heading"><span class="file-strong">1. Columbia Business School Upper Level Seminar in value Investing (12 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdefc817c908fa2e5ee_Columbia%20Business%20School%20Upper%20Level%20Seminar%20in%20value%20Investing.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdefc817c908fa2e5ee_Columbia%20Business%20School%20Upper%20Level%20Seminar%20in%20value%20Investing.pdf</a>
+Type: supplied PDF; OCR. Original lecture and November 1993 checklist: goodwill, history, CF, margins, ownership and downside; asset-price focus.</p><div class="file-heading"><span class="file-strong">2. Grant's Interest Rate Observer Fall Investment Conference (11 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdfece32ceeac68872c_Grant%27s%20Interest%20Rate%20Observer%20Fall%20Investment%20Conference.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdfece32ceeac68872c_Grant%27s%20Interest%20Rate%20Observer%20Fall%20Investment%20Conference.pdf</a>
+Type: supplied PDF; OCR. Original conference/Q&amp;A: no market forecasts, low debt, troubled assets, four-year turnover; British exception to foreign avoidance.</p><div class="file-heading"><span class="file-strong">3. NYSSA Honors Walter Schloss (3 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe074916c6d949e636e_NYSSA%20Honors%20Walter%20Schloss.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe074916c6d949e636e_NYSSA%20Honors%20Walter%20Schloss.pdf</a>
+Type: supplied PDF; digital text. November 2006 NYSSA account: four-year holdings, low debt, integrity, scale selling; performance reported with fees context.</p><div class="file-heading"><span class="file-strong">4. Warnner E. Buffett Letter (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fde0b5194aaf107c219_February%203%2C1976%20Warnner%20E.%20Buffett%20Letter.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fde0b5194aaf107c219_February%203%2C1976%20Warnner%20E.%20Buffett%20Letter.pdf</a>
+Type: supplied PDF; OCR. February 1976 Buffett letter praises 20-year record; notes FIVE losing years, not loss-free investing.</p><div class="file-heading"><span class="file-strong">5. Warnner E. Buffett Letter (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fda58c5da7323f74927_April%2015%2C1994%20Warnner%20E.%20Buffett%20Letter.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fda58c5da7323f74927_April%2015%2C1994%20Warnner%20E.%20Buffett%20Letter.pdf</a>
+Type: supplied PDF; OCR. April 1994 Buffett letter: low overhead and asset-bargain discipline; scanned date/header has OCR ambiguity.</p><div class="file-heading"><span class="file-strong">6. Walter &amp; Edwin Schloss associates (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdbe9e6606cf83b02c5_December%206%2C9994%20Walter%20%26%20Edwin%20Schloss%20associates.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdbe9e6606cf83b02c5_December%206%2C9994%20Walter%20%26%20Edwin%20Schloss%20associates.pdf</a>
+Type: supplied PDF; OCR. December 1994 Graham tribute: statistical value and integrity; filename/header has year typo, not a 9994 event.</p><div class="file-heading"><span class="file-strong">7. Walter J. Schloss for Warner E. Buffett (7 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf09439000f9da70ea_January%206%2C2007%20Walter%20J.%20Schloss%20for%20Warner%20E.%20Buffett.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf09439000f9da70ea_January%206%2C2007%20Walter%20J.%20Schloss%20for%20Warner%20E.%20Buffett.pdf</a>
+Type: supplied PDF; OCR. January 2007 historical holdings list, including foreign securities and short positions. Historical inventory, not current recommendations.</p><div class="file-heading"><span class="file-strong">8. 47 Year Result of Walter &amp; Edwin Schloss Associates (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdb433f884f965f346e_47%20Year%20Result%20of%20Walter%20%26%20Edwin%20Schloss%20Associates.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdb433f884f965f346e_47%20Year%20Result%20of%20Walter%20%26%20Edwin%20Schloss%20Associates.pdf</a>
+Type: supplied PDF; visual table. 1956-2002 annual-results table. Both pages visually read after failed OCR. Shows losses and gross/net distinction; historical only.</p><div class="file-heading"><span class="file-strong">9. A Dozen Things I have Learned from Philip Fisher (4 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdbffcabe1fdebb553d_A%20Dozen%20Things%20I%27ve%20Learned%20from%20Philip%20Fisher.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdbffcabe1fdebb553d_A%20Dozen%20Things%20I%27ve%20Learned%20from%20Philip%20Fisher.pdf</a>
+Type: supplied PDF; digital text. Commentary separating Fisher growth/concentration from Schloss assets/diversification. Do not blend their methods.</p><div class="file-heading"><span class="file-strong">10. Benjamin Graham and Security Analysis A Reminiscene (5 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdc09439000f9da6cd1_Benjamin%20Graham%20and%20Security%20Analysis%20A%20Reminiscene.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdc09439000f9da6cd1_Benjamin%20Graham%20and%20Security%20Analysis%20A%20Reminiscene.pdf</a>
+Type: supplied PDF; OCR. Graham reminiscence: downside protection, liquidation analysis, arithmetic and ethics. Scan duplicates item 11.</p><div class="file-heading"><span class="file-strong">11. Benjamin Graham and Security Analysis (4 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdb00c8c042144ce40b_Benjamin%20Graham%20and%20Security%20Analysis.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdb00c8c042144ce40b_Benjamin%20Graham%20and%20Security%20Analysis.pdf</a>
+Type: supplied PDF; digital text. Text version of the same reminiscence, duplicated in item 10; not independent evidence.</p><div class="file-heading"><span class="file-strong">12. Factors needed to make money in the stock market (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdde57e088f29805997_Factors%20needed%20to%20make%20money%20in%20the%20stock%20market.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdde57e088f29805997_Factors%20needed%20to%20make%20money%20in%20the%20stock%20market.pdf</a>
+Type: supplied PDF; OCR. Original March 10, 1994 16 factors. Primary source for price/value, leverage, patience, multi-year lows and reassess before selling.</p><div class="file-heading"><span class="file-strong">13. Financial Intelligence Report (3 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdebe2465c9ab7b0fa1_Financial%20Intelligence%20Report.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdebe2465c9ab7b0fa1_Financial%20Intelligence%20Report.pdf</a>
+Type: supplied PDF; digital text. May 2004 three-page newsletter excerpt, not entire seven-page issue. Contains historical macro claims and unrelated REIT material.</p><div class="file-heading"><span class="file-strong">14. Finding Value Among the Lows The Walter J. Schloss Approach (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf184ecc7025046cfd_Finding%20Value%20Among%20the%20Lows%20%20The%20Walter%20J.%20Schloss%20Approach.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf184ecc7025046cfd_Finding%20Value%20Among%20the%20Lows%20%20The%20Walter%20J.%20Schloss%20Approach.pdf</a>
+Type: supplied PDF; digital text. AAII October 2009 reconstruction: ten-year record, debt-free, lows, insiders. Its fixed sell summary is not controlling.</p><div class="file-heading"><span class="file-strong">15. Forbes Top Stories (3 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fded49f595395841b40_Forbes%20Top%20Stories.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fded49f595395841b40_Forbes%20Top%20Stories.pdf</a>
+Type: supplied PDF; digital text. Forbes February 2008 Experience: low debt/assets/footnotes, Superior/CNA/Bassett examples and unresolved price risk.</p><div class="file-heading"><span class="file-strong">16. From The Thoughtful Businessman (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdfcc7873e3f9609769_From%20The%20Thought%20-%20Ful%20Businessman.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdfcc7873e3f9609769_From%20The%20Thought%20-%20Ful%20Businessman.pdf</a>
+Type: supplied PDF; OCR. HBR letters on buybacks below versus above book; includes Ellis counterarguments about liquidity and future earnings.</p><div class="file-heading"><span class="file-strong">17. In Defence of Stock Dividends (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf42d9453bf3bc751e_In%20Defence%20of%20Stock%20Dividends.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdf42d9453bf3bc751e_In%20Defence%20of%20Stock%20Dividends.pdf</a>
+Type: supplied PDF; OCR. 1953 stock-dividend letter: cash conservation and shareholder recognition. Historical tax statements not modern tax guidance.</p><div class="file-heading"><span class="file-strong">18. Making Money Out of Junk (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdff49457c4e6fec524_Making%20Money%20Out%20of%20Junk.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fdff49457c4e6fec524_Making%20Money%20Out%20of%20Junk.pdf</a>
+Type: supplied PDF; OCR. Forbes August 1973 asset bargains: three possible paths (earnings, acquisition, buyback), and failed Milwaukee deal warning.</p><div class="file-heading"><span class="file-strong">19. NYSAA Value Investing Archive (3 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe0f49457c4e6fec591_NYSAA%20Value%20Investing%20Archive.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe0f49457c4e6fec591_NYSAA%20Value%20Investing%20Archive.pdf</a>
+Type: supplied PDF; digital text. 2008 archive dedication/Q&amp;A: individual merits, avoid debt, diversify, ownership and patience.</p><div class="file-heading"><span class="file-strong">20. Read Between the Lines (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe203f49f9ecf68e4e4_Read%20Between%20the%20Lines.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe203f49f9ecf68e4e4_Read%20Between%20the%20Lines.pdf</a>
+Type: supplied PDF; digital text. Columbia newspaper pages contain unrelated opinion article and Going Out on Top interview; both inspected, unrelated material not principles.</p><div class="file-heading"><span class="file-strong">21. Result of Walter &amp; Edwin Schloss associates (1 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe203f49f9ecf68e499_Result%20of%20Walter%20%26%20Edwin%20Schloss%20associates.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe203f49f9ecf68e499_Result%20of%20Walter%20%26%20Edwin%20Schloss%20associates.pdf</a>
+Type: supplied PDF; OCR. Annual performance table through 1995; OCR unreliable for exact numeric transcription. Used as historical record, not projected return.</p><div class="file-heading"><span class="file-strong">22. The Dow Jones Industrial Average Amended (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe21d2d5c05f9b0e361_The%20Dow%20Jones%20Industrial%20Average%20Amended.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe21d2d5c05f9b0e361_The%20Dow%20Jones%20Industrial%20Average%20Amended.pdf</a>
+Type: supplied PDF; OCR. Index methodology: price-weighting distorts Dow; argues for market-value weighting and appropriate benchmark.</p><div class="file-heading"><span class="file-strong">23. The Over Valuation of Some Blue Chip Stocks (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe2be2465c9ab7b12d2_The%20Over%20Valuation%20of%20Some%20Blue%20Chip%20Stocks.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe2be2465c9ab7b12d2_The%20Over%20Valuation%20of%20Some%20Blue%20Chip%20Stocks.pdf</a>
+Type: supplied PDF; OCR. Blue-chip valuation warning: long earnings, dividend and price/book history, future expectations can be overpaid.</p><div class="file-heading"><span class="file-strong">24. Three Industrial Stock Averages Contrasted (6 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe3fd0de31fe739838f_Three%20Industrial%20Stock%20Averages%20Contrasted.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe3fd0de31fe739838f_Three%20Industrial%20Stock%20Averages%20Contrasted.pdf</a>
+Type: supplied PDF; OCR + visual check. Six-page Graham/Schloss industrial-index comparison: composition, hindsight and chasing popular winners. All pages visually checked.</p><div class="file-heading"><span class="file-strong">25. UNARCO We've never Stopped Growing (4 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe327227883e5ded3a4_UNARCO%20We%27ve%20never%20Stopped%20Growing.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe327227883e5ded3a4_UNARCO%20We%27ve%20never%20Stopped%20Growing.pdf</a>
+Type: supplied PDF; OCR. Composite scan: intrinsic-value versus relative-value letter, UNARCO advertisement, Graham memorial notes. Ad is not investment recommendation.</p><div class="file-heading"><span class="file-strong">26. Warren Buffett on Walter Schloss (2 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe33410891fccb44fa3_Warren%20Buffett%20on%20Walter%20Schloss.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe33410891fccb44fa3_Warren%20Buffett%20on%20Walter%20Schloss.pdf</a>
+Type: supplied PDF; digital text. Buffett tribute: long-term record from many securities, public information and integrity. No-risk praise is not a safety guarantee.</p><div class="file-heading"><span class="file-strong">27. Why Walter Schloss Is Such a Great Investor (7 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe44237a726556ce310_Why%20Walter%20Schloss%20Is%20Such%20a%20Great%20Investor.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe44237a726556ce310_Why%20Walter%20Schloss%20Is%20Such%20a%20Great%20Investor.pdf</a>
+Type: supplied PDF; OCR. Barron's 1985 interview plus 1989 profile: liabilities/assets, honesty, diversification, valuation-driven sell; no safety guarantee.</p><div class="file-heading"><span class="file-strong">28. Why we invest the way we do (5 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe5be2465c9ab7b15ee_Why%20we%20invest%20the%20way%20we%20do.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe5be2465c9ab7b15ee_Why%20we%20invest%20the%20way%20we%20do.pdf</a>
+Type: supplied PDF; OCR. Original May 1996 Harvard lecture: personality, 20-year history, low debt, current value, sometimes small premium over book.</p><div class="file-heading"><span class="file-strong">29. Yes, You can beat the Market (7 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe7fa165379a7d9aa6d_Yes%2C%20You%20can%20beat%20the%20Market.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe7fa165379a7d9aa6d_Yes%2C%20You%20can%20beat%20the%20Market.pdf</a>
+Type: supplied PDF; OCR. Fortune multi-investor value article: flexible half/two-thirds/book thresholds, documented Intertan loss; no guaranteed outperformance.</p><div class="file-heading"><span class="file-strong">30. A Discussion of Dr. George Athanassakos with Mr. Walter Schloss (4 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fda83d87ab88798a046_A%20Discussion%20of%20Dr.%20George%20Athanassakos%20with%20Mr.%20Walter%20Schloss.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fda83d87ab88798a046_A%20Discussion%20of%20Dr.%20George%20Athanassakos%20with%20Mr.%20Walter%20Schloss.pdf</a>
+Type: supplied PDF; digital text. May 2008 Athanassakos discussion plus Survivors profile: history/debt/ownership and foreign reluctance; only-two-loss-years claim contradicted by primary table.</p><div class="file-heading"><span class="file-strong">31. Stock Screenin With Walter Schloss (5 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe23d2102cad6ee3e94_Stock%20Screenin%20With%20Walter%20Schloss.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe23d2102cad6ee3e94_Stock%20Screenin%20With%20Walter%20Schloss.pdf</a>
+Type: supplied PDF; digital text. AAII May 2009 explicit third-party screen, within10% of52wk low, insider median, zero LT debt. Warns extra research is needed.</p><div class="file-heading"><span class="file-strong">32. Video of 92-Year Old Walter Schloss (3 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe308f8fbdd57521283_Video%20of%2092-Year%20Old%20Walter%20Schloss.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe308f8fbdd57521283_Video%20of%2092-Year%20Old%20Walter%20Schloss.pdf</a>
+Type: supplied PDF; digital text. John Huber March 2013 written summary of a 92-year-old Schloss Q&amp;A. Supplied PDF read; original video not watched.</p><div class="file-heading"><span class="file-strong">33. WALTER &amp; EDWIN SCHLOSS - PART I (65 pages)</span></div><p class="file-p"><a class="file-link" href="https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe347821ec7dc3c32fd_WALTER%20%26%20EDWIN%20SCHLOSS%20-%20PART%20I.pdf" rel="noopener noreferrer" target="_blank">https://www.bishoprockcap.com/assets/cdn.prod.website-files.com/5b7c186c36ef662dc0a4b05a/67893fe347821ec7dc3c32fd_WALTER%20%26%20EDWIN%20SCHLOSS%20-%20PART%20I.pdf</a>
+Type: supplied PDF; digital text. 65-page OID compilation contains BOTH parts of 1989 interview: flexible values, debt, honesty, liquidity, diversification, no tobacco, loss/catalyst risks.</p></div></details></section></section><footer class="file-closing">13 October 2026 snapshot. Future monthly runs should refresh prices, filings, share counts, corporate actions and coverage, and preserve this snapshot. No trading or investment action is available from this report.</footer></main></body></html>
