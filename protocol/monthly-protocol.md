@@ -2,7 +2,7 @@
 
 > **Technical note.** This is the checklist for repeating the research each month. For the plain-English explanation, see [How it was made](../docs/07-how-it-was-made.md).
 
-Updated 13 October 2026. Research only, not personalized financial advice. No trades.
+Updated 14 October 2026. Research only, not personalized financial advice. No trades.
 
 ## Timing and scope
 
@@ -49,3 +49,13 @@ Lead with the research conclusion, including a no-buy month when warranted. Incl
 The monthly report is published as a readable page (plain-English summary first, technical detail after) and as a portable HTML file kept in `reports/`, with the monthly snapshot retained. Both use the same verified data. Check the layout on a phone-width screen and a desktop screen, and check that links work.
 
 Keep credentials, account emails, sign-in links and personal information out of public files. Before calling a monthly run complete, confirm the update has actually landed in the repository.
+
+## Monthly results table and checked-data revisions
+
+Maintain `monthly-results.html` as the public plain-language results page. Every scheduled run appends the month for US, NSE and ASX and republishes both this table and the HTML report. Keep it linked from the README and reader navigation.
+
+For each market record discovery counts, actual coverage and missing data. For selected named results record month, market, ticker/name, baseline/strict/net-net numerical status, research verdict, change versus last month, price date, statement date and source link. Separate vendor hits from filing-checked names. NSE P/B hits are not tangible-book hits. Label indicative or stale prices, unverified tests and specialist cases. Do not invent a complete named list from summary counts. The first month has no prior comparison.
+
+When newly published filings, prices, corporate actions or corrected vendor fields are checked during a run or a separately assigned update, revise affected rows promptly after verification. Record revision date, evidence and reason, distinguishing price change from book erosion, dilution or distributions. Retain the prior report snapshot and repository history. New externally published data alone does not mean the table has refreshed. No continuous/live feed is claimed. If event-driven monitoring is requested, establish its sources, cadence and coverage separately.
+
+Use the same verified data for the hosted File, repository HTML report and table. Verify all table content at 320px, 390px and 1280px, using stacked labeled rows on phones. After committing, verify raw files and the rebuilt live page, source links and navigation before reporting completion. Research-only verdicts remain valid even when no buy is certified.
