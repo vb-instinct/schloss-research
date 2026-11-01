@@ -4,7 +4,7 @@
 
 **Easiest way to read it:** the rendered site at https://vb-instinct.github.io/schloss-research/
 
-**Snapshot date:** 13 October 2026. This is the first monthly snapshot. Prices and company numbers go stale quickly.
+**Latest snapshot:** 1 November 2026 monthly run (30 October closes), building on the first snapshot of 13 October 2026. Prices and company numbers go stale quickly.
 
 > **Research notes only. This is not investment, tax or legal advice.** Nothing here is a recommendation to buy or sell anything. No trades were made. Read [limits and caveats](docs/06-limits-and-caveats.md) before using anything on this page.
 
@@ -32,7 +32,7 @@ Full plain-English version: [docs/01 Summary](docs/01-summary.md).
 | 6 | [Limits and caveats](docs/06-limits-and-caveats.md) | What was not checked and why you should be careful |
 | 7 | [How it was made, and how it repeats](docs/07-how-it-was-made.md) | Method, sources, and the monthly routine |
 
-An illustrated single-page version is here: **[October 2026 report](reports/schloss-october-2026.html)**. (GitHub shows .html files as code. Download it and open it in a browser, or use the rendered version at https://vb-instinct.github.io/schloss-research/reports/schloss-october-2026.html.)
+Illustrated single-page versions: **[October 2026 report](reports/schloss-october-2026.html)** (the deep dive) and **[November 2026 report](reports/schloss-november-2026.html)** (the monthly refresh). (GitHub shows .html files as code. Download it and open it in a browser, or use the rendered version at https://vb-instinct.github.io/schloss-research/reports/schloss-october-2026.html.)
 
 ## For analysts: the technical notes
 
@@ -40,6 +40,7 @@ These are the working notes behind the plain-English pages. They are denser, use
 
 - [Screening rules](criteria/criteria.md)
 - [Full framework and implementation notes](framework/schloss-framework-and-implementation.md)
+- November 2026 run: [US screen](markets/us/us-screen-2026-11-01.md), [US diligence](markets/us/diligence-2026-11-01.md), [NSE screen](markets/nse/nse-screen-2026-11-01.md), [NSE diligence](markets/nse/diligence-2026-11-01.md), [ASX update](markets/asx/asx-update-2026-11-01.md)
 - US: [screen](markets/us/us-screen-2026-10-13.md), [diligence](markets/us/diligence-2026-10-13.md)
 - India (NSE): [screen](markets/nse/nse-screen-2026-10-13.md), [diligence](markets/nse/diligence-2026-10-13.md)
 - Australia (ASX): [summary](markets/asx/asx-summary-2026-10-13.md), [update](markets/asx/asx-update-2026-10-13.md), [diligence](markets/asx/diligence-2026-10-13.md)
